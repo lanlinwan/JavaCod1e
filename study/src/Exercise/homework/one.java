@@ -15,11 +15,10 @@ public class one {
         Scanner s = new Scanner(System.in);
         while (true) {
             System.out.println("请输入用户个数（不多于5人）");
-            int number = s.nextInt();
+            String number = s.next();
             boolean b = recommend(number);
             if (b) {
                 break;
-
             }
         }
 
@@ -33,15 +32,16 @@ public class one {
     }
 
     //使用的车
-    private static boolean recommend(int num) {
-        if (num <= 0) {
+    private static boolean recommend(String num) {
+        int number=Integer.parseInt(num);
+        if (number <= 0) {
             System.out.println("请输入正确的人数");
             return false;
-        } else if (num <= 3) {
+        } else if (number <= 3) {
             System.out.println("千锋租车行推荐你使用小车的三轮车1号，可以承载3个人，价格为：10元/小时 ");
             Tricycle = true;
             return true;
-        } else if (num <= 5) {
+        } else if (number <= 5) {
             System.out.println("千锋租车行推荐你使用薇薇的自行车,承载5个人，价格为：15元/小时");
             //Cycling = true;
             return true;
