@@ -19,6 +19,7 @@ public class one {
             boolean b = recommend(number);
             if (b) {
                 break;
+
             }
         }
 
