@@ -3,76 +3,87 @@ package Exercise.homework;
 import java.util.Scanner;
 
 public class one {
-    //        一：小中的三轮车1号。可以承载3个人，价格为：10元/小时；
-    //        二：薇薇的自行车。可以承载5个人，价格为：15元/小时；
 
     static int tricycle = 10;
     static int cycling = 15;
     static boolean ComeUp = false;
     static boolean Tricycle = false;
+    static boolean b = true;
+    static boolean c = true;
+    static boolean d = true;
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        while (true) {
+
+        while (b) {
             System.out.println("请输入用户个数（不多于5人）");
             String number = s.next();
-            boolean b = recommend(number);
-            if (b) {
-                break;
-            }
+            recommend(number);
         }
 
-        System.out.println();
-        System.out.println("输入目的地距离（小于100公里，价格不变；多于100公里，价格上浮20%）");
-        double distance = s.nextDouble();
-        priceFluctuation(distance);
-        System.out.println("输入使用时间");
-        double hours = s.nextDouble();
-        price(hours);
+        while (c) {
+            System.out.println();
+            System.out.println("请输入公里数");
+            String km = s.next();
+            priceFluctuation(km);
+        }
+
+        while (d) {
+            System.out.println("输入使用时间");
+            String hours = s.next();
+            price(hours);
+        }
+
     }
 
     //使用的车
-    private static boolean recommend(String num) {
-        int number=Integer.parseInt(num);
-        if (number <= 0) {
+    private static void recommend(String number) {
+        if (!number.matches("^\\+?[1-5][0-5]*$")) {
             System.out.println("请输入正确的人数");
-            return false;
-        } else if (number <= 3) {
+            return;
+        }
+        int num = Integer.parseInt(number);
+        if (num <= 3 && num > 0) {
             System.out.println("千锋租车行推荐你使用小车的三轮车1号，可以承载3个人，价格为：10元/小时 ");
             Tricycle = true;
-            return true;
-        } else if (number <= 5) {
+        } else if (num <= 5) {
             System.out.println("千锋租车行推荐你使用薇薇的自行车,承载5个人，价格为：15元/小时");
             //Cycling = true;
-            return true;
-        } else {
-            System.out.println("人数小于(大于)5人，请重新输入");
-            return false;
         }
-
+        b = false;
     }
 
     //价格是否上浮
-    private static void priceFluctuation(double distance) {
-        if (distance > 100) {
+    private static void priceFluctuation(String distance) {
+        if (!distance.matches("^\\+?[1-9][0-9]*$")) {
+            System.out.println("请输入正确的公里数");
+            return;
+        }
+        int dis = Integer.parseInt(distance);
+        if (dis >= 100) {
             ComeUp = true;
         }
+        c = false;
     }
 
     //计算价格
-    private static void price(double hours) {
-        double finalPrice;
-        if (Tricycle) {
-           finalPrice=tricycle*hours;
+    private static void price(String Hours) {
+        if (Hours.matches("^(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*))$") || Hours.matches("^\\+?[1-9][0-9]*$")) {
+            double hours = Double.parseDouble(Hours);
+            double finalPrice;
+            if (Tricycle) {
+                finalPrice = tricycle * hours;
 
+            } else {
+                finalPrice = cycling * hours;
+            }
+            if (ComeUp) {
+                finalPrice = finalPrice * 1.2;
+            }
+            System.out.println("你即将使用价格是:" + finalPrice);
+            d = false;
         } else {
-            finalPrice=cycling*hours;
+            System.out.println("请输入正确的时间");
         }
-        if (ComeUp){
-            finalPrice=finalPrice*1.2;
-        }
-        System.out.println("你即将使用价格是:"+finalPrice);
     }
-
-
 }
