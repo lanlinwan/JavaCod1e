@@ -338,7 +338,6 @@ public class ATM {
             }else{
                 System.out.println("两次密码不一致请重新输入");
             }
-            break;
         }
 
 
