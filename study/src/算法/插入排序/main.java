@@ -12,16 +12,10 @@ public class main {
         bubbleSort(arr);
     }
     public static void bubbleSort(int[] arr){
-        //1. 找到无序的数组是从哪一个索引开始无序的
-        int start=-1;
-        for (int i = 0; i <arr.length ; i++) {
-            if (arr[i]>arr[i+1]){
-                start=i+1;
-                break;
-            }
-        }
-        //2. 从start 开始遍历到最后一个元素
-        for (int i = start; i <arr.length; i++) {
+
+
+        // 从1开始遍历到最后一个元素
+        for (int i = 1; i <arr.length; i++) {
 
             int j=i;
 

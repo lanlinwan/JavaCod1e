@@ -14,6 +14,7 @@ public class main {
         a.add("lan");
         a.add('中');
 
+
         System.out.println(a);
         //2.指定索引位置插入元素
         a.add(1,66);

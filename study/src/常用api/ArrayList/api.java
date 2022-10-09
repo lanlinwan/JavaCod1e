@@ -38,5 +38,10 @@ public class api {
         System.out.println(n);
         System.out.println(list);
 
+        //7. addAll() 一次性添加
+        ArrayList<String> list1=new ArrayList<>();
+        list1.addAll(list);
+
+
     }
 }

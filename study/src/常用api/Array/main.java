@@ -1,6 +1,7 @@
 package 常用api.Array;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class main {
     public static void main(String[] args) {
@@ -51,6 +52,39 @@ public class main {
         int[] arr2={10,55,23,88,76,15,86,23,56};
         Arrays.sort(arr2);
         System.out.println(Arrays.toString(arr2));
+
+        // sort 自定义规则
+
+        //第二个参数是一一个接口，所以我们在调用方法的时候，需要传递这个接口的实现类对象，作为排序的规则。
+        //但是这个实现类，我只要使用一一次， 所以就没有必要单独的去写一一个类， 直接采取匿名内部类的方式就可以了
+        //底层原理:
+        //利用插入排序+二分查找的方式进行排序的。
+        //默认把0索引的数据当做是有序的序列，1索引到最后认为是无序的序列。
+        //遍历无序的序列得到里面的每一一个元素，假设当前遍历得到的元素是A元素
+        //把A往有序序列中进行插入，在插入的时候，是利用: 二分查找确定A元素的插入点。
+        //拿着A元素，跟插入点的元素进行比较，比较的规则就是compare方法的方法体
+        //如果方法的返回值是负数，拿着A继续跟前面的数据进行比较
+        //如果方法的返回值是正数，拿着A继续跟后面的数据进行比较
+        //如果方法的返回值是0，也拿着A跟后面的数据进行比较
+        //.直到能确定A的最终位置为止。
+        // compare方法的形式参数:
+        //参数一o1:表示在 无序序列中，遍历得到的每一-个元素
+        //参数二o2:有序序列中的元素
+        //返回值:
+        //负数:表示当前要插入的元素是小的，放在前面
+        //正数:表示当前要插入的元素是大的，放在后面
+        //0:表示当前要插入的元素跟现在的元素比是- *样的们也会放在后面
+
+        //o1-o2 表示 升序 反之 降序
+
+        Integer[] arr1={23,12,12,66,95,45,83,26};
+        Arrays.sort(arr1,new Comparator<Integer>(){
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1-o2;
+            }
+        });
+        System.out.println(arr1[0]);
 
     }
 }
