@@ -1,7 +1,5 @@
 package 常用api.Object;
 
-import 面向对象.static修饰.User;
-
 //Cloneable
 //如果一介接口里面没有抽象方法
 //表示当前的接口是一个标记性接口

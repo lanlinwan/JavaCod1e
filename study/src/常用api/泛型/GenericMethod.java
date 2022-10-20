@@ -9,7 +9,8 @@ public class GenericMethod {
 
 
     //添加多个元素
-    public static <E> void addAll(ArrayList<E> list,E...e){
+    @SafeVarargs
+    public static <E> void addAll(ArrayList<E> list, E...e){
         for (E element:e){
             list.add(element);
         }

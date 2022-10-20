@@ -2,8 +2,6 @@ package Exercise.拼图游戏;
 
 
 import Exercise.拼图游戏.ui.gameJframe;
-import Exercise.拼图游戏.ui.loginJframe;
-import Exercise.拼图游戏.ui.registerJframe;
 
 public class APP {
 

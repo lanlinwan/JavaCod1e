@@ -1,7 +1,5 @@
 package 面向对象.内部类.成员内部类;
 
-import 面向对象.内部类.Car;
-
 public class test {
     public static void main(String[] args) {
         //获取成员内部类对象的两种方式:

@@ -3,7 +3,6 @@ package 常用api.Lambda表达式;
 
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class main {
     //原写法
