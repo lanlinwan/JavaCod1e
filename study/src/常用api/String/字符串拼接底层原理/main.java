@@ -2,7 +2,7 @@ package 常用api.String.字符串拼接底层原理;
 
 public class main {
     public static void main(String[] args) {
-        String s1="a";
+        String s1= "序列化";
 
         //字符串拼接如果有变量:
         //JDK8之前: 底层利用了 StringBuilder 进行拼接 并使用 toString 返回字符串(至少创建两个对象)

@@ -17,7 +17,7 @@ public class User {
 
     //示例成员方法 无 static 修饰,存在于每个对象中,只能用对象访问
     public void study() {
-        System.out.println(name + "好好享受");
+        System.out.println(name +online+ "好好享受");
     }
 
     //注意:使用场景中,表示对象自己的行为,且方法中需要访问示例成员的,该方法必须声明成实例方法

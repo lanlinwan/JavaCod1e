@@ -6,14 +6,14 @@ public class main {
         //有参数构造器
         User u=new User();
         u.setName("lan");
-        u.setHeight(1.6);
+        u.setHeight(0.6);
         u.setSalary(8888);
         System.out.println(u.getName());
         System.out.println(u.getHeight());
         System.out.println(u.getSalary());
 
         //无参数构造器
-        User u1=new User("LAN",1.66,1000);
+        User u1=new User("LAN",0.66,1000);
         System.out.println(u1.getName());
         System.out.println(u1.getHeight());
         System.out.println(u1.getSalary());

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <input type="button" value="一个按钮" v-on:click="show()">
+    <input type="button" value="一个按钮" @:click="show()">
+    <br><br>
+
+    <table style="border:1px;mso-cellspacing:0; width:60%" >
+
+        <tr style="align-content:center" v-for="(emp,index) in emps">
+            <td>{{index+1}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.job}}</td>
+            <td>{{emp.url}}</td>
+        </tr>
+    </table>
+
+
+
+</div>
+
+
+<script type="text/javascript" src="../../js/vue.js"></script>
+<script>
+    //创建Vue核心对象
+    new Vue({
+        el: "#app",//设置管理区域
+        // data:function () {
+        //   return{
+        //     name:""
+        //   }
+        // }
+        data: {//存放模型数据
+            name: "lan",
+            url: "https://www.baidu.com",
+            emps:[]
+        },
+        methods: {//事件
+            show() {
+                alert("我被点了");
+            }
+        },
+        /*
+        mounted:function(){}
+         */
+        mounted() {
+            alert("加载完成")
+            //发送异步请求,加载数据
+            axios.get("http://yapi.smart-xwork.cn/mock/169327/emp/list").then(result=>{
+                this.emps=result.data.data
+            })
+        }
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

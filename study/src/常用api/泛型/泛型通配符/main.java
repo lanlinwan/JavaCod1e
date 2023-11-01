@@ -11,9 +11,8 @@ public class main {
 
         method(list1);
         method(list2);
-        //method(list3);
+        method(list3);
     }
-
     /**
      * 此时，泛型里面写的是什么类型，那么只能传递什么类型的数据。
      * 弊端:
@@ -30,7 +29,7 @@ public class main {
      * 泛型的通配符:
      * 关键点:可以限定类型的范围。
      */
-    public static <E> void method(ArrayList<? super fu> list) {
+    public static <E> void method(ArrayList<? super E> list) {
 
     }
 }

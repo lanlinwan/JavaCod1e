@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+<!--  Maven坐标
+      ➢Maven 中的坐标是 资源的唯一标识，通过该坐标可以唯一 定位资源位 置。
+      ➢使用坐标来定义项目或引入项目中需要的依赖。
+   - Maven坐标主要组成
+      ➢groupld: 定义当前Maven项目隶属组织名称(通常是域名反写，例如: com.itheima
+      ➢artifactld: 定义当前Maven项目名称(通常是模块名称,例如order-service、goods-service
+      ➢version: 定义当前项目版本号-->
+  <groupId>org.example</groupId>
+  <artifactId>mavenAdvanced</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <!--继承父类 依赖-->
+  <parent>
+    <groupId>org.example</groupId>
+    <artifactId>maven1</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../maven1/pom.xml</relativePath>
+  </parent>
+  <!--在子工程中配置使用父工程中可选的依赖-->
+<dependencies>
+  <dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>druid</artifactId>
+  </dependency>
+</dependencies>
+
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+
+
+
+
+</project>

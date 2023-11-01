@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/1" />
+    <file type="web" url="file://$PROJECT_DIR$/Comprehensive" />
+    <file type="web" url="file://$PROJECT_DIR$/cookie-session" />
+    <file type="web" url="file://$PROJECT_DIR$/cookie与session" />
+    <file type="web" url="file://$PROJECT_DIR$/element" />
+    <file type="web" url="file://$PROJECT_DIR$/ExBrand" />
+    <file type="web" url="file://$PROJECT_DIR$/ExLogin" />
+    <file type="web" url="file://$PROJECT_DIR$/Filter" />
+    <file type="web" url="file://$PROJECT_DIR$/loginJson" />
+    <file type="web" url="file://$PROJECT_DIR$/maven" />
+    <file type="web" url="file://$PROJECT_DIR$/maven1" />
+    <file type="web" url="file://$PROJECT_DIR$/mavenAdvanced" />
+    <file type="web" url="file://$PROJECT_DIR$/tomact-demo1" />
+    <file type="web" url="file://$PROJECT_DIR$/tomcat1" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled" />
+    <file type="web" url="file://$PROJECT_DIR$/vue" />
+    <file type="web" url="file://$PROJECT_DIR$/../JavaWeb/ajax" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/maven-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/hhh/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/tomcat1/pom.xml" />
+        <option value="$PROJECT_DIR$/tomact-demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/ExLogin/pom.xml" />
+        <option value="$PROJECT_DIR$/1/pom.xml" />
+        <option value="$PROJECT_DIR$/ExBrand/pom.xml" />
+        <option value="$PROJECT_DIR$/cookie-session/pom.xml" />
+        <option value="$PROJECT_DIR$/Filter/pom.xml" />
+        <option value="$PROJECT_DIR$/ajax/pom.xml" />
+        <option value="$PROJECT_DIR$/loginJson/pom.xml" />
+        <option value="$PROJECT_DIR$/vue/pom.xml" />
+        <option value="$PROJECT_DIR$/element/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/pom.xml" />
+        <option value="$PROJECT_DIR$/mavenAdvanced/pom.xml" />
+        <option value="$PROJECT_DIR$/maven1/pom.xml" />
+        <option value="$PROJECT_DIR$/study/email/pom.xml" />
+        <option value="$PROJECT_DIR$/Comprehensive/pom.xml" />
+        <option value="$PROJECT_DIR$/oracle/pom.xml" />
+        <option value="$PROJECT_DIR$/oracle1/pom.xml" />
+        <option value="$PROJECT_DIR$/oracle2/pom.xml" />
+        <option value="$PROJECT_DIR$/Redis-jedis/pom.xml" />
+        <option value="$PROJECT_DIR$/Redis-Spring/pom.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectKey">
     <option name="state" value="project://e2804f05-5315-4fc6-a121-c522a6c26470" />
   </component>

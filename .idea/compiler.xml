@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ExLogin" />
+        <module name="maven" />
+        <module name="mybatis" />
+        <module name="VUE" />
+        <module name="Redis-jedis" />
+        <module name="loginJson" />
+        <module name="oracle1" />
+        <module name="Filter" />
+        <module name="oracle2" />
+        <module name="Redis-Spring" />
+        <module name="tomact-demo1" />
+        <module name="Comprehensive" />
+        <module name="Oracle" />
+        <module name="ExBrand" />
+        <module name="email" />
+        <module name="element" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Comprehensive" target="1.7" />
+      <module name="element" target="16" />
+      <module name="email" target="16" />
+      <module name="ExBrand" target="16" />
+      <module name="ExLogin" target="1.7" />
+      <module name="Filter" target="16" />
+      <module name="loginJson" target="16" />
+      <module name="maven" target="1.7" />
+      <module name="maven1" target="1.5" />
+      <module name="mavenAdvanced" target="1.7" />
+      <module name="mybatis" target="1.7" />
+      <module name="Oracle" target="16" />
+      <module name="oracle1" target="16" />
+      <module name="oracle2" target="16" />
+      <module name="Redis-jedis" target="16" />
+      <module name="Redis-Spring" target="16" />
+      <module name="tomact-demo1" target="1.7" />
+      <module name="VUE" target="16" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Redis-Spring" options="-parameters" />
+    </option>
+  </component>
+</project>

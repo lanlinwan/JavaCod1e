@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--名称空间-->
+<mapper namespace="mapper.UserMapper">
+
+    <!--缓存设置-->
+    <cache/>
+
+    <!--
+    数据库表的字段名称和实体 类的属性名称不一-样，则不能自动封装数据
+      1.起别名:对不一样的列名起别名，让别名和实体类的属性名一 样
+        *缺点:每次查询都要定义一-次别名.
+      2.sqL片段
+        *缺点:不灵活
+         <sql id="user_column">
+                id,name,age,contact,hobby
+         </sql>
+
+        <select id="selectAll" resultType="mybatis.user">
+            select
+                <include refid="user_column"/>
+            from user;
+        </select>
+
+      3. resultMap:
+        1.定义<resultMap>标签
+        2.在<select>标签中， 使用resultMap属性替换resultType属性
+-->
+    <!--
+            id:唯-*标识          type:(对象名)映射的类型 支持别名
+            column:sql表的列名   property:java实体类的属性名
+    -->
+        <resultMap id="userResultMap" type="mybatis.user">
+            <id property="id" column="id"/>
+            <result  property="name" column="name"/>
+        </resultMap>
+        <select id="SelectAllMap" resultMap="userResultMap">
+            select *  from user;
+        </select>
+
+
+    <!--   查询所有 resultType: 查询结果 映射java实体类
+    -->
+    <select id="selectAll" resultType="mybatis.user">
+        select *
+        from user;
+    </select>
+
+
+    <!--    ID查询
+       参数占位符:
+       1.#{}:会将其替换为?，为了防止SQL注入
+       2.${}: 拼sqL。会存在SQL注入问题,还有单引号使用情况
+       3.使用时机:
+       ★参数传递的时候: #{}
+       ★表名或者列名不固定的情况下: ${} 会存在SQL注入问题
+        参数列表: parameterType:可以省略
+        特殊字符处理:
+         1.转义字符
+         2.CDATA区
+          <![CDATA[ < ]]>
+    -->
+   <!--
+        <select id="selectById" resultType="mybatis.user">
+            select *
+            from user
+            where id = #{id};
+        </select>
+    -->
+
+    <!--    条件查询
+        <select id="selectByCondition"  resultType="mybatis.user">
+            select *
+            from user
+            where id = #{id}
+              and name like #{name}
+              and age like #{age}
+        </select>
+
+        动态SQL
+            问题: 无id 会使SQL语句拼接错误
+            解决: 恒等式 1=1
+                 <where></where> 替换 where
+    -->
+
+
+    <!-- <if>根据判断决定是否 将内容填充至 sql语句中 -->
+    <!--where:
+    当where标签中有内容时，会自动生成where关键字，并且将内容 前 多余的and或or去掉
+    当where.标签中没有内容时，此时where 标签没有任何效果
+    注意: where 标签不能将其中 内容后面多余的and或or去掉-->
+    <select id="selectByCondition" resultType="mybatis.user">
+        select *
+        from user
+        <where>
+            <if test="id !=null">
+                id = #{id}
+            </if>
+            <if test="name !=null and name !='' ">
+                and name like #{name}
+            </if>
+            <if test="age !=null">
+                and age like #{age}
+            </if>
+        </where>
+    </select>
+
+    <!--trim:
+        若标签中有内容时:
+        prefix/suffix:将trim标签中内容前面或后面添加指定内容
+        suffixOverrides|prefixOverrides:将trim标签中内容前面或后面去掉指定内容
+        若标签中没有内容时: trim标签也没有任何效果-->
+    <select id="selectTrim" resultType="mybatis.user">
+        select *
+        from user
+        <trim prefix="where" suffixOverrides="and||or">
+            <if test="id !=null">
+                id = #{id} and
+            </if>
+            <if test="name !=null and name !='' ">
+                 name like #{name}  and
+            </if>
+            <if test="age !=null">
+                age like #{age}
+            </if>
+        </trim>
+    </select>
+
+
+    <!-- choose   单条件动态查询-->
+    <select id="selectByConditionSingle" resultType="mybatis.user">
+        select *
+        from user
+        <where>
+            <choose><!-- 相当于switch-->
+                <when test="id !=null"><!-- 相当于case-->
+                    id = #{id}
+                </when>
+                <when test="name !=null and name !='' ">
+                    and name like #{name}
+                </when>
+                <when test="age !=null">
+                    and age like #{age}
+                </when>
+                 <otherwise><!-- 相当于default-->
+                 1=1
+                 </otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <!--模糊查询
+        '%#{username}%'    报错,占位符会被拼接成 '%?%'
+         concat('%',#{username},'%')  concat拼接可以
+         "%"#{username}"%"   可以
+    -->
+    <select id="selectByLike" resultType="mybatis.user">
+            # select * from lan.user where name like '%#{username}%'
+             select * from lan.user where name like concat('%',#{username},'%')
+            # select * from lan.user where name like  "%"#{username}"%"
+    </select>
+
+    <!--动态设置表名 只能使用${}-->
+    <select id="getAllUser" resultType="mybatis.user">
+        select * from ${tablesuser}
+    </select>
+
+    <!--添加-->
+    <!--主键返回:获取刚刚添加记录 的 自增主键,他是把获取到的的主键放回传入的对象属性中
+        void add(User user);
+        useGeneratedKeys:设置当前标签中的sql使用了自增的主键
+        keyProperty:将自增的主键的值赋值给传输到映射文件中参数的某个属性
+    -->
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        insert into user values (null,#{name}, #{age}, #{contact}, #{hobby});
+    </insert>
+
+    <!--修改 -->
+    <!--    <update id="update">
+             update user
+             <set>
+              name=#{name},
+              age=#{age},
+              contact= #{contact},
+              hobby= #{hobby}
+  -         where id=#{id};
+            </update>-->
+    <!--动态修改 -->
+    <update id="update">
+        update user
+        <set>
+            <if test="name !=null and name !='' ">
+                name=#{name},
+            </if>
+            <if test="age !=null">
+                age=#{age},
+            </if>
+            <if test="contact !=null and contact !=''">
+                contact= #{contact},
+            </if>
+            <if test="hobby !=null and hobby !=''">
+                hobby= #{hobby}
+            </if>
+        </set>
+        where id=#{id};
+    </update>
+
+    <!--    删除-->
+    <delete id="deleteById">
+        delete
+        from user
+        where id = #{id}
+    </delete>
+
+    <!--批量删除-->
+    <!--
+        mybatis会将数组参数，封装为-个Map集合。
+        *默认: array =数组
+        *使用@Param注解改变map集合的默认key的名称
+        separator 拼接遍历元素的之间分隔符
+        open     拼接内容前面
+        close    拼接内容后面
+    -->
+    <delete id="deleteByIdarr">
+        delete from user
+        where id
+        in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>;
+    </delete>
+    <!--简便写法-->
+    <delete id="deleteByIds">
+        delete from user
+        where id
+        <foreach collection="ids" item="id" separator="or">
+            #{id}
+        </foreach>;
+    </delete>
+
+    <!--
+     String 批量删除 只能使用 ${}
+   -->
+    <delete id="deleteByIdstr">
+        delete from user where id in (${ids})
+    </delete>
+
+</mapper>

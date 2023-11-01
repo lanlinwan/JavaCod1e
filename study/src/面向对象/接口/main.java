@@ -22,15 +22,15 @@ public class main {
         r.eat();
 
         //接口中成员的特点:
-        //●成员变量:只能是常量
-        //默认修饰符: public static final
+        //●成员变量:只能是常量 默认修饰符: public static final
         System.out.println(Swim.a);
         //●构造方法:没有
-        //●成员方法:
-        //只能是抽象方法
-        //默认修饰符: public abstract
+        //●成员方法: 只能是抽象方法 默认修饰符: public abstract
         //●JDK7以前:接口中只能定义抽象方法。
         //●JDK8的新特性:接口中可以定义有方法体的方法。
         //●JDK9的新特性:接口中可以定义私有方法。
+
+
+
     }
 }

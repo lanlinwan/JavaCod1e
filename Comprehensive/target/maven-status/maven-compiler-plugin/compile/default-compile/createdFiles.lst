@@ -1,0 +1,16 @@
+service\BrandServiceImpl.class
+pojo\tbl_login.class
+service\loginServicelmpl.class
+util\SqlSessionUtils.class
+mapper\BrandMapper.class
+pojo\Brand.class
+web\serevlet\old\SelectAllServlet.class
+web\serevlet\BaseServlet.class
+mapper\tbl_loginMapper.class
+web\serevlet\old\AddServlet.class
+web\serevlet\loginServlet.class
+web\serevlet\BrandServlet.class
+web\serevlet\register.class
+pojo\PageBean.class
+web\main.class
+service\BrandService.class

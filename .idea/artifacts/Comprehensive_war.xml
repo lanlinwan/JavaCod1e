@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Comprehensive:war">
+    <output-path>$PROJECT_DIR$/Comprehensive/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Comprehensive</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Comprehensive-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Comprehensive:war exploded" />
+    </root>
+  </artifact>
+</component>

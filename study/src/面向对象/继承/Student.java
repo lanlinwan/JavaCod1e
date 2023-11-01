@@ -12,7 +12,7 @@ public class Student extends People {
 
     }
     public Student(String name){
-        this(name,18);
+        this(name,0);//再次调用 此类 带两个参数的构造函数
     }
     //方法重写
     @Override

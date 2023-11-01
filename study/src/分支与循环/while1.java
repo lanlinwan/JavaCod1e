@@ -4,10 +4,10 @@ public class while1 {
     public static void main(String[] args){
         //while 一般在不确定循环次数时使用
 
-        // 需求：珠穆朗峰高度是8848860 纸张厚度 0.1 折叠纸张直到不低于珠穆朗峰位置，求折叠几次
-        // 1、定义变量记录山峰的高度 纸张的厚度
+        // 需求：珠穆朗峰高度是8848860 纸张厚度 0.com 折叠纸张直到不低于珠穆朗峰位置，求折叠几次
+        // com、定义变量记录山峰的高度 纸张的厚度
         double peakHeight = 8848860;
-        double paperThickness = 0.1;
+        double paperThickness = 0;
 
         // 3、定义一个变量用于记录纸张折叠的次数
         int count = 0;
@@ -30,6 +30,9 @@ public class while1 {
             System.out.println(count);
             count++;
         }
+
+
+
     }
 
 

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ExLogin:war">
+    <output-path>$PROJECT_DIR$/ExLogin/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ExLogin</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ExLogin-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ExLogin:war exploded" />
+    </root>
+  </artifact>
+</component>

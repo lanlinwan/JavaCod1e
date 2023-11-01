@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <input v-model="name">
+    <!--插值表达式-->
+    {{name}}
+    <br>
+
+    <!--v-bind 单向数据绑定:数据只能从data流向页面-->
+    <a v-bind:href="url">点击一下</a>
+    <a :href="url">点击一下</a>
+    <input v-model="url">
+    <br><br>
+
+    <!--v-model 只应用在 输入类标签
+        双向数据绑定:数据能从data流向页面  也能从页面流向data
+    -->
+    单向数据绑定<input type="text" v-bind:value="name"><br>
+    双向数据绑定<input type="text" v-model:value="name">
+    <br><br>
+
+    <!-- v-on 绑定事件 -->
+    <input type="button" value="一个按钮" v-on:click="show()">
+    <input type="button" value="一个按钮" @:click="show()">
+    <br><br>
+
+    <!-- v-if - v-else-if - v-else -
+         条件性的渲染元素,为 true时渲染
+         v-show
+         根据条件展示元素
+    -->
+    <div v-if="count===3">div1</div>
+    <div v-else-if="count===2">div2</div>
+    <div v-else>div3</div>
+    <div v-show="count === 3">div v-show</div>
+    <br>
+    <input v-model="count">
+    <br><br>
+
+    <!-- v-for -->
+    <div v-for="addr in addrs">
+        {{addr}} <br>
+    </div>
+    <!--加索引-->
+    <div v-for="(addr,i) in addrs">
+        {{i}}--{{addr}} <br>
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript" src="js/vue.js"></script>
+<script>
+    //创建Vue核心对象
+    new Vue({
+        el: "#app",//设置管理区域
+        // data:function () {
+        //   return{
+        //     name:""
+        //   }
+        // }
+        data: {//存放模型数据
+            name: "lan",
+            url: "https://www.baidu.com",
+            count: 3,
+            addrs: ["北京", "上海", "江西"],
+        },
+        methods: {//事件
+            show() {
+                alert("我被点了");
+            }
+        },
+        /*
+        mounted:function(){}
+         */
+        mounted() {
+            alert("加载完成")
+        }
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

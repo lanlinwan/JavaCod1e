@@ -30,17 +30,20 @@ public class calender {
         //1 (星期日) 2 (星期一) 3 (星期二) 4 (星期三) 5 (星期四) 6 (星期五) 7 (星期六)
 
         //修改日历表示的时间
-        Date d=new Date(0L);
+        Date d=new Date();
         c.setTime(d);
         System.out.println(c);
 
         //1. public int get(int field)取日期中的某个字段信息
         //java在Calendar类中，把索引对应的数字都定义成常量
-        int year = c.get(Calendar. YEAR);
-        int month = c. get (Calendar .MONTH) + 1;
-        int date = c. get(Calendar.DAY_OF_MONTH);
-        int week = c.get(Calendar . DAY_OF_WEEK);
-        System. out . println(year + ", " + month + "，" +date+", "+ week);//1970,日，1
+        int year = c.get(Calendar. YEAR);         //年份
+        int month = c. get (Calendar .MONTH) + 1; //月份
+        int date = c. get(Calendar.DAY_OF_MONTH); //日期
+        int week = c.get(Calendar . DAY_OF_WEEK); //星期几
+        int hour=c.get(Calendar.HOUR_OF_DAY);     //小时
+        int minute = c.get(Calendar.MINUTE);      //分钟
+        int second = c.get(Calendar.SECOND);      //秒
+        System. out . println(year + "年" + month + "月" +date+"日 "+  ((week-1 ==0)? "星期日" : "星期"+(week-1) ) );//1970,日，1
 
         //2. public void set(int field,int value) 修改日历的某个字段信息
         c.set(Calendar.YEAR,2000);

@@ -5,16 +5,23 @@ import java.util.Scanner;
 
 public class 双色球 {
     public static void main(String[] args) {
+        //双色球官方号码
         int[] dou= Doublecolor();
+        //买的双色球号码
         int[] buy= buyno();
+        //计算中奖结果
         judge(dou,buy);
     }
+
+    //
     public static void printArray(int[] arr){
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
+
+    //计算中奖结果
     public static void judge(int[] dou,int[] buy){
         int r = 0;
         int b = 0;
@@ -53,6 +60,8 @@ public class 双色球 {
             System.out.println("感谢您为福利事业做出的突出贡献！！");
         }
     }
+
+    //买的 双色球号码
     public static int[] buyno(){
         int[] unm=new int[7];
         Scanner s=new Scanner(System.in);
@@ -80,6 +89,8 @@ public class 双色球 {
         unm[unm.length-1]=s.nextInt();
         return unm;
     }
+
+    //得出 双色球官方号码
     public static int[] Doublecolor(){
         int[] red=new int[7];
         Random r=new Random();
@@ -104,7 +115,9 @@ public class 双色球 {
             }
            //System.out.print(i>red.length?red[i]:red[i]+",");
         }
+        //最后一个 蓝球号码
         red[red.length-1]=r.nextInt(16)+1;
+
         return red;
     }
 }

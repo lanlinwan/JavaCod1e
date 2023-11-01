@@ -20,6 +20,7 @@ public class Throws {
         //●前两者结合,出现异常直接抛出去给调用者,调用者捕获处理。
 
 
+        //   throw ：写在方法内，结束方法。手动抛出异常对象，交给调用者。方法中下面的代码不再执行了。
         //异常处理方式1一- throws
         //●throws: 用在方法上，可以将方法内部出现的异常抛出去给本方法的调用者处理。
         //●这种方式并不好，发生异常的方法自己不处理异常,如果异常最终抛出去给虚拟机将引起程序死亡。
@@ -28,6 +29,16 @@ public class Throws {
         //规范做法:
         //方法 throws Exception{}
         parse("2022-10-17 9:15:00");
+
+        // throw 关键字用于在当前方法中抛出一个异常。
+        // 通常情况下，当代码执行到某个条件下无法继续正常执行时，可以使用 throw 关键字抛出异常，以告知调用者当前代码的执行状态。
+        // 例如，下面的代码中，在方法中判断 num 是否小于 0，如果是，则抛出一个 IllegalArgumentException 异常。
+
+        int num=-1;
+            if (num < 0) {
+                throw new IllegalArgumentException("Number must be positive");
+            }
+
 
 
     }

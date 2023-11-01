@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--引入外部资源文件-->
+    <properties resource="jdbc.properties"/>
+    
+    <!--设置全局配置-->
+    <settings>
+        <!--将_自动映射为驼峰  tbl_book:tblBook-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    
+    <!--设置类型别名-->
+    <typeAliases>
+        <!--
+        typeAlias:设置某个类型的别名
+        属性:
+          type:设置需要设置别名的类型
+          alias:设置某个类型的别名，若不设置该属性，那么该类型拥有默认的别名，即类名且不区分
+        -->
+        <typeAlias type="mybatis.user" alias="user"/>
+        <!--以包为单位，将包下所有的类型设置默认的类型别名，即类名且不区分大小写-->
+        <package name="mybatis.user"/>
+    </typeAliases>
+
+    <plugins>
+        <!--设置分页插件-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"/>
+    </plugins>
+
+    <!--
+    environments:配置数据库连接环境信息。可以配置多个environment,通过default 属性切换不同的environment
+    -->
+    <environments default="development">
+        <environment id="development">
+            <!--
+            transact ionManager:设置事务管理方式
+            属性:
+             type= "JDBC /MANAGED”
+               JDBC:表示当前环境中，执行SQL时,使用的是JDBC中原生的事务管理方式，
+                    事务的提交或回滚需要手动处理
+               MANAGED:被管理，例Spring
+            -->
+
+            <transactionManager type="JDBC"/>
+            <!--
+                dataSource:配置数据源
+                属性:
+                type:设置数据源的类型
+                type= "POOL ED/UNPOOLED/JNDI”
+                POOLED:表示使用数据库连接池缓存数据库连接
+                UNPOOLED:表示不使用数据库连接池
+                JNDI:表示使用上下文中的数据源T
+            -->
+            <dataSource type="POOLED">
+                <!--数据库连接信息-->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="url"/>
+                <property name="username" value="${}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!--    加载sql映射文件-->
+        <!-- <mapper resource="mapper/userMapper.xml"/>-->
+
+        <!-- 以包为单位 mapper代理方式-->
+        <package name="mapper"/>
+    </mappers>
+
+</configuration>

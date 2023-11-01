@@ -2,6 +2,7 @@ package 分支与循环;
 
 public class for1 {
     public static void main(String[] args) {
+
     //for 循环
     //打印一个菱形
         //上三角
@@ -11,7 +12,6 @@ public class for1 {
                System.out.print(" ");
            }
            for (int j=1;j<=i;j++){
-               System.out.print("");
                System.out.print(" *");
            }
        }
@@ -22,7 +22,6 @@ public class for1 {
                 System.out.print(" ");
             }
             for (int j=10;j>=i;j--){
-                System.out.print("");
                 System.out.print(" *");
             }
         }

@@ -14,5 +14,25 @@ public class main {
         //          ->Exception: java.lang包下， 称为异常类，它表示程序本身可以处理的问题
         //                       ->除RuntimeException之外所有的异常:编译时异常,编译期必须处理的，否则程序不能通过编译。(日 期格式化异常)。
 
+        //Throwable 成员方法:
+        //public String getMessage()    返回此throwable的详细消息字符串
+        //public String toString()      返回此可抛出的简短描述
+        //public void printStackTrace() 把异常的错误信息输出在控制台,仅仅是打印信息 不会结束程序运行
+        int[] arr={1,2,3,4,5};
+
+        try{
+            System.out.println(arr[10]);
+        }catch (ArrayIndexOutOfBoundsException e){
+            String a=e.getMessage();
+            System.out.println(a);
+
+            String b=e.toString();
+            System.out.println(b);
+
+            e.printStackTrace();
+        }
+
+        System.out.println("后面的执行");
+
     }
 }

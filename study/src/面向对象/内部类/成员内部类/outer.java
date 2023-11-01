@@ -7,16 +7,26 @@ public class outer {//外部类
     //在成员内部类中,JDK16之前不能定义静态变量,后面开始才能定义 静态变量
 
 
-    private class engine{//成员内部类
+    private abstract class engine{//成员内部类(可以抽象)
         String engineName;
         int engineAge;
+        static int Age;
+        void eng(){
+            System.out.println("engine执行");
+        }
+        public abstract void a();
     }
-    public engine getEngine(){
-        return  new engine();
+    public inner getEngine(){
+        return  new inner();
     }
-    public class inner{//成员内部类
+    public class inner extends engine{//成员内部类(可以继承)
         String innerName;
         int innerAge;
+
+        @Override
+        public void a() {
+            System.out.println("inner执行");
+        }
     }
 
     //外部类,内部类,内部类方法 同名属性访问

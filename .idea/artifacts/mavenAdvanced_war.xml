@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mavenAdvanced:war">
+    <output-path>$PROJECT_DIR$/mavenAdvanced/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>mavenAdvanced</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mavenAdvanced-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="mavenAdvanced:war exploded" />
+    </root>
+  </artifact>
+</component>

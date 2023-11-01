@@ -10,9 +10,12 @@ public class main {
         //public static int binarySearch(数组，查找的元素) 二分查找法查找元素
         //public static int[] copyOf(原数组，新数组长度) 拷贝数组
         //public static int[] copyOfRange(原数组，起始索引，结束索引) 拷贝数组( 指定范围)
-        //public static void fil(数组，元素) 填充数组，
+        //public static void fill(数组，元素) 填充数组，
+        //public static boolean equals(arr,arr) 比较数组元素是否相等
         //public static void sort(数组) 按照默认方式进行数组排序
         //public static void sort(数组，排序规则) 按照指定的规则排序
+        //            sort(arr,String.CASE_INSENSITIVE_ORDER) 忽略大小写,字母表排序
+
 
         //tostring:将数组变成字符串
         System.out.println("--------------toString- ");
@@ -42,7 +45,7 @@ public class main {
         int[] newArr2 = Arrays.copyOfRange(arr, 0, 9);
         System.out.println(Arrays.toString(newArr2));
 
-        //fi1l:填充数组
+        //fill:填充数组
         System.out.println("---------------fill---- ");
         Arrays.fill(arr, 100);
         System.out.println(Arrays.toString(arr));

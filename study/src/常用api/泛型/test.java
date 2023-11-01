@@ -23,6 +23,7 @@ public class test {
         //泛型接口
         genericInterface i=new genericInterface();
         i.add(" 555");
+        //i.add(55);
 
         genericInterface2<String> ii=new genericInterface2<>();
         ii.add(" 5555");

@@ -27,7 +27,7 @@ public class locadatetime {
         System.out.println(nowDateTime.getMonth().getValue());
 
         LocalDate ld = nowDateTime.toLocalDate();
-        System.out.println(ld);
+        System.out.println("nowDateTime.toLocalDate="+ld);
 
         LocalTime lt = nowDateTime.toLocalTime();
         System.out.println(lt.getHour());

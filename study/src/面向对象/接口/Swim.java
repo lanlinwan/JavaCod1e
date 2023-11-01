@@ -4,5 +4,13 @@ public interface Swim {
     //public static final
     int a=10;
     //public abstract
-    void swim();
+    public void swim();
+
+     default void b(){
+
+     };
+
+    private void a(){
+
+    };
 }

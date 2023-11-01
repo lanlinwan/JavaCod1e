@@ -6,4 +6,9 @@ public class Student extends Person {
     public void show(){
         System.out.println("学生信息为:"+getName()+","+getAge());
     }
+
+
+    public void s(){
+        System.out.println("学生特有方法");
+    }
 }

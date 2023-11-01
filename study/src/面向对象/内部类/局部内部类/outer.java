@@ -1,7 +1,7 @@
 package 面向对象.内部类.局部内部类;
 
 public class outer {
-    int b=30;
+     int b=30;
 
     public void show(){
         int a=10;

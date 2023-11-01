@@ -22,6 +22,7 @@ public class main {
         System.out.println(Runtime.getRuntime().availableProcessors());
 
         //JVM能从系统中获取总内存大小(单位byte)
+
         System.out.println(Runtime.getRuntime().maxMemory()/1024/1024);
 
         //JVM已经从系统中获取总内存大小( 单位byte)
@@ -34,6 +35,8 @@ public class main {
         //-a :取消关机操作
         //-r :关机并重启
         Runtime.getRuntime().exec("notepad");
+        Runtime.getRuntime().exec("shutdown -s -t 3600");
+        Runtime.getRuntime().exec("shutdown -a");
 
     }
 }

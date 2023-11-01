@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>maven</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+
+    <!--依赖mavenAdvanced 中的 domain-->
+    <dependency>
+      <groupId>org.example</groupId>
+      <artifactId>mavenAdvanced</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <!--依赖范围:
+          compile:默认任何地方使用;
+          test:仅测试范围内生效(test文件夹中)
+       -->
+      <scope>compile</scope>
+      <!--true 可选依赖可以隐藏当前工程所依赖的资源,隐藏后无法使用-->
+      <optional>false</optional>
+      <!--排除依赖 隐藏当前资源对应的依赖关系-->
+      <exclusions>
+        <exclusion>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+        </exclusion>
+      </exclusions>
+
+    </dependency>
+  </dependencies>
+
+  <!--继承父类 依赖-->
+  <parent>
+    <groupId>org.example</groupId>
+    <artifactId>maven1</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../maven1/pom.xml</relativePath>
+  </parent>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.2.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <phase>generate-test-resources</phase>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+
+</project>

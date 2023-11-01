@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+        Vue中的事件修饰符:
+        1. prevent:阻止默认事件(常用) ;
+        2.stop:阻止事件冒泡(常用) ;
+        3.once: 事件只触发-次 (常用) ;
+        4. capture:使用事件的捕获模式;
+        5.self:只有event . target是当前操作的元素时才触发事件;
+        6.passive:事件的默认行为立即执行，无需等待事件回调执行完毕;
+-->
+
+<div id="div">
+    <button @click="showInof1">点击1</button>
+    <a href="http://www.baidu.com" @click.prevent="showInof">点击</a>
+</div>
+</body>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el: '#div',
+        data: {},
+        methods: {
+            showInof1(e) {
+                alert(666)
+            },
+            showInof(e) {
+                alert(666)
+            }
+        }
+    })
+</script>
+</html>

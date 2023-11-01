@@ -19,7 +19,7 @@ public class 增强for遍历 {
         // 修改增强for的变量,不会修改集合原本的数据
         for (String s:coll){
             System.out.println(s);
-            s="q";
+            //s="q";
         }
 
 

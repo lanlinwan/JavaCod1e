@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ExBrand:war">
+    <output-path>$PROJECT_DIR$/ExBrand/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ExBrand</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ExBrand-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ExBrand:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -33,7 +33,7 @@ public class api {
         Boolean b=list.remove("lan");
         System.out.println(b);
 
-        //6.set(int,E):修改某个索引位置的元素值,返回被删除的值
+        //6.set(int,E):修改某个索引位置的元素值,返回被修改的值
         String n= list.set(0,"lll");
         System.out.println(n);
         System.out.println(list);

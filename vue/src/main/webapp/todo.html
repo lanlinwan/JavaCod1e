@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <tabLe border="1" cellspacing="0" width="800">
+        <tr>
+            <th>序号</th>
+            <th>标题</th>
+            <th>身份</th>
+        </tr>
+
+        <tr v-for="(brand,i) in brands"  align="center">
+            <td>{{i+1}}</td>
+            <td>{{brand.id}}</td>
+            <td>{{brand.title}}</td>
+            <td>{{brand.status}}</td>
+            <td>{{brand.getStatusStr}}</td>
+            <td><a href="#">修改</a> <a href="#">删除</a></td>
+        </tr>
+
+
+    </table>
+</div>
+
+<script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
+
+<script>
+    new Vue({
+        el: "#app",
+        data() {
+            return {
+                brands: []
+            }
+        },
+        mounted() {
+            //页面加载完成后，发送异步请求，查询数据
+            const _this = this;
+
+            axios({
+                method: "get",
+                url: "http://localhost:8080/vue/selectAllServlet"
+            }).then(function (resp) {
+                _this.brands = resp.data;
+            })
+        }
+    })
+
+</script>
+
+</body>
+</html>

@@ -14,7 +14,7 @@ public class omit {
 
     Integer[] arr={23,12,12,66,95,45,83,26};
 
-//        Arrays.sort(arr1,new Comparator<Integer>(){
+//        Arrays.sort(arr,new Comparator<Integer>(){
 //        @Override
 //        public int compare(Integer o1, Integer o2) {
 //            return o1-o2;

@@ -78,7 +78,7 @@ public class one {
                 finalPrice = cycling * hours;
             }
             if (ComeUp) {
-                finalPrice = finalPrice * 1.2;
+                finalPrice = finalPrice * 0.2;
             }
             System.out.println("你即将使用价格是:" + finalPrice);
             d = false;

@@ -1,5 +1,7 @@
 package 数组;
 
+import java.util.Arrays;
+
 public class main {
     public static void main(String[] args) {
         //一.静态初始化:
@@ -10,7 +12,7 @@ public class main {
         //字符串数组
         String[] names={"兰","本","才","剑","辉","平"};
         //使用索引访问,修改
-        System.out.println(names[0]);
+        System.out.println(names);
         names[0]="蓝";
         System.out.println(names[0]);
         //数组长度
@@ -23,8 +25,10 @@ public class main {
 
         //二.动态初始化
         //数据类型[] 数组名=new 数据类型[长度];
+        int[] arri=new int[3];
         //直接访问会 访问默认值
-        int[] arr=new int[3];
+        int[] arr=new int[]{1, 2, 3};
+        int arro[] =new int[]{1, 2, 3};
         arr[0]=0;
         arr[1]=1;
         arr[2]=2;

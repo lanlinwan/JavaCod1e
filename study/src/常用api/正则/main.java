@@ -4,6 +4,7 @@ public class main {
     public static void main(String[] args) {
         //正则表达式: 校验字符串是否满足规则
         String qq="2903053386";
+        //  \\ 表示我要插入一个正则表达式的反斜线: \ ,所以其后的字符具有特殊的意义。
         boolean a= qq.matches("[1-9]\\d{5,19}");
         System.out.println(a);//true
         //书写规则:

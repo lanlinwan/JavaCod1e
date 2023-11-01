@@ -31,18 +31,16 @@ public class Niuniu {
 
     public static void main(String[] args) {
         System.out.println(cards);
-        dealCards("兰本才", "江浩威", "邓修鹏");
+        dealCards("兰本才", "江浩威", "李志强");
     }
 
     /**
-     * @param a 玩家
-     * @param b 玩家
-     * @param c 玩家
+     *
      */
-    public static void dealCards(String a, String b, String c) {
-        deal(a);
-        deal(b);
-        deal(c);
+    public static void dealCards(String ...args) {
+        for (String arg : args) {
+            deal(arg);
+        }
     }
 
     public static int residuum = 52;
@@ -54,25 +52,28 @@ public class Niuniu {
      * @param player 玩家
      */
     public static void deal(String player) {
-//        calculate(cheat.cheat(player, cardsInt, cards));//
+       // calculate(cheat.cheat(player, cardsInt, cards));
         ArrayList<String> a = new ArrayList<>();
         ArrayList<Integer> b = new ArrayList<>();
+        //每人发五张牌,拿一个随机数
         for (int i = 0; i < 5; i++) {
             int rr = r.nextInt(residuum);
+            //牌量总数减一
             residuum = residuum - 1;
-                //带花色的
-                String get = String.valueOf(cards.get(rr));
-                cards.remove(rr);
-                a.add(i, get);
-                //不带花色的
-                int getInt = cardsInt.get(rr);
-                if (getInt > 10) {
-                    getInt = 10;
-                }
-                cardsInt.remove(rr);
-                b.add(i, getInt);
+            //带花色的
+            String get = String.valueOf(cards.get(rr));
+            cards.remove(rr);
+            a.add(i, get);
+            //不带花色的
+            int getInt = cardsInt.get(rr);
+            if (getInt > 10) {
+                getInt = 10;
             }
-        System.out.println(player+"的牌是"+a);
+            cardsInt.remove(rr);
+            b.add(i, getInt);
+        }
+
+        System.out.println(player + "的牌是" + a);
         calculate(b);
         //System.out.println(b);
     }
@@ -93,6 +94,7 @@ public class Niuniu {
         String result = "";
         boolean Niubility = false;
         boolean CowEggs = false;
+
         for (int i = 0; i < b.size() - 2; i++) {
             int cardi = b.get(i);
             for (int j = i + 1; j < b.size() - 1; j++) {
