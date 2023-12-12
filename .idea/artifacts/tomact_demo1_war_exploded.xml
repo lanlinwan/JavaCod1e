@@ -11,16 +11,16 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="tomact-demo1" />
+          <element id="module-output" name="requestANDreponse" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.6" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/tomact-demo1/target/tomact-demo1-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/requestANDreponse/target/tomact-demo1-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="tomact-demo1/web/Web" />
+      <element id="javaee-facet-resources" facet="requestANDreponse/web/Web" />
     </root>
   </artifact>
 </component>

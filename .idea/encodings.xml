@@ -10,6 +10,8 @@
     <file url="file://$PROJECT_DIR$/Redis-Spring/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/element/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/element/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jspANDservlet/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jspANDservlet/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/loginJson/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/loginJson/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/maven/src/main/java" charset="UTF-8" />
@@ -19,10 +21,10 @@
     <file url="file://$PROJECT_DIR$/mavenAdvanced/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tomact-demo1/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tomact-demo1/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vue/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vue/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/技术栈/src/Comprehensive/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/技术栈/src/Comprehensive/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

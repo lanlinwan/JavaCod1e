@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -195,7 +195,7 @@ function normalizeComponent (
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/index.vue?vue&type=template&id=3408b139&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/index.前端.vue?前端.vue&type=template&id=3408b139&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -236,9 +236,9 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/result/src/index.vue?vue&type=template&id=3408b139&
+// CONCATENATED MODULE: ./packages/result/src/index.前端.vue?前端.vue&type=template&id=3408b139&
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/icon-success.vue?vue&type=template&id=18119418&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/icon-success.前端.vue?前端.vue&type=template&id=18119418&
 var icon_successvue_type_template_id_18119418_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -260,9 +260,9 @@ var icon_successvue_type_template_id_18119418_staticRenderFns = []
 icon_successvue_type_template_id_18119418_render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/result/src/icon-success.vue?vue&type=template&id=18119418&
+// CONCATENATED MODULE: ./packages/result/src/icon-success.前端.vue?前端.vue&type=template&id=18119418&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/icon-success.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/icon-success.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -275,12 +275,12 @@ icon_successvue_type_template_id_18119418_render._withStripped = true
 /* harmony default export */ var icon_successvue_type_script_lang_js_ = ({
   name: 'IconSuccess'
 });
-// CONCATENATED MODULE: ./packages/result/src/icon-success.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/result/src/icon-success.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_icon_successvue_type_script_lang_js_ = (icon_successvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/result/src/icon-success.vue
+// CONCATENATED MODULE: ./packages/result/src/icon-success.前端.vue
 
 
 
@@ -301,9 +301,9 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/result/src/icon-success.vue"
+component.options.__file = "packages/result/src/icon-success.前端.vue"
 /* harmony default export */ var icon_success = (component.exports);
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/icon-error.vue?vue&type=template&id=21199246&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/icon-error.前端.vue?前端.vue&type=template&id=21199246&
 var icon_errorvue_type_template_id_21199246_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -325,9 +325,9 @@ var icon_errorvue_type_template_id_21199246_staticRenderFns = []
 icon_errorvue_type_template_id_21199246_render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/result/src/icon-error.vue?vue&type=template&id=21199246&
+// CONCATENATED MODULE: ./packages/result/src/icon-error.前端.vue?前端.vue&type=template&id=21199246&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/icon-error.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/icon-error.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -340,9 +340,9 @@ icon_errorvue_type_template_id_21199246_render._withStripped = true
 /* harmony default export */ var icon_errorvue_type_script_lang_js_ = ({
   name: 'IconError'
 });
-// CONCATENATED MODULE: ./packages/result/src/icon-error.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/result/src/icon-error.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_icon_errorvue_type_script_lang_js_ = (icon_errorvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./packages/result/src/icon-error.vue
+// CONCATENATED MODULE: ./packages/result/src/icon-error.前端.vue
 
 
 
@@ -363,9 +363,9 @@ var icon_error_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var icon_error_api; }
-icon_error_component.options.__file = "packages/result/src/icon-error.vue"
+icon_error_component.options.__file = "packages/result/src/icon-error.前端.vue"
 /* harmony default export */ var icon_error = (icon_error_component.exports);
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/icon-warning.vue?vue&type=template&id=46fe8f31&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/icon-warning.前端.vue?前端.vue&type=template&id=46fe8f31&
 var icon_warningvue_type_template_id_46fe8f31_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -387,9 +387,9 @@ var icon_warningvue_type_template_id_46fe8f31_staticRenderFns = []
 icon_warningvue_type_template_id_46fe8f31_render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/result/src/icon-warning.vue?vue&type=template&id=46fe8f31&
+// CONCATENATED MODULE: ./packages/result/src/icon-warning.前端.vue?前端.vue&type=template&id=46fe8f31&
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/icon-warning.vue?vue&type=script&lang=ts&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/icon-warning.前端.vue?前端.vue&type=script&lang=ts&
 
 
 
@@ -403,9 +403,9 @@ icon_warningvue_type_template_id_46fe8f31_render._withStripped = true
   name: 'IconWarning'
 });
 
-// CONCATENATED MODULE: ./packages/result/src/icon-warning.vue?vue&type=script&lang=ts&
+// CONCATENATED MODULE: ./packages/result/src/icon-warning.前端.vue?前端.vue&type=script&lang=ts&
  /* harmony default export */ var src_icon_warningvue_type_script_lang_ts_ = (icon_warningvue_type_script_lang_ts_); 
-// CONCATENATED MODULE: ./packages/result/src/icon-warning.vue
+// CONCATENATED MODULE: ./packages/result/src/icon-warning.前端.vue
 
 
 
@@ -426,9 +426,9 @@ var icon_warning_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var icon_warning_api; }
-icon_warning_component.options.__file = "packages/result/src/icon-warning.vue"
+icon_warning_component.options.__file = "packages/result/src/icon-warning.前端.vue"
 /* harmony default export */ var icon_warning = (icon_warning_component.exports);
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/icon-info.vue?vue&type=template&id=19e3de69&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/icon-info.前端.vue?前端.vue&type=template&id=19e3de69&
 var icon_infovue_type_template_id_19e3de69_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -450,9 +450,9 @@ var icon_infovue_type_template_id_19e3de69_staticRenderFns = []
 icon_infovue_type_template_id_19e3de69_render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/result/src/icon-info.vue?vue&type=template&id=19e3de69&
+// CONCATENATED MODULE: ./packages/result/src/icon-info.前端.vue?前端.vue&type=template&id=19e3de69&
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/icon-info.vue?vue&type=script&lang=ts&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/icon-info.前端.vue?前端.vue&type=script&lang=ts&
 
 
 
@@ -466,9 +466,9 @@ icon_infovue_type_template_id_19e3de69_render._withStripped = true
   name: 'IconInfo'
 });
 
-// CONCATENATED MODULE: ./packages/result/src/icon-info.vue?vue&type=script&lang=ts&
+// CONCATENATED MODULE: ./packages/result/src/icon-info.前端.vue?前端.vue&type=script&lang=ts&
  /* harmony default export */ var src_icon_infovue_type_script_lang_ts_ = (icon_infovue_type_script_lang_ts_); 
-// CONCATENATED MODULE: ./packages/result/src/icon-info.vue
+// CONCATENATED MODULE: ./packages/result/src/icon-info.前端.vue
 
 
 
@@ -489,9 +489,9 @@ var icon_info_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var icon_info_api; }
-icon_info_component.options.__file = "packages/result/src/icon-info.vue"
+icon_info_component.options.__file = "packages/result/src/icon-info.前端.vue"
 /* harmony default export */ var icon_info = (icon_info_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/result/src/index.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/result/src/index.前端.vue?前端.vue&type=script&lang=js&
 var _components;
 
 //
@@ -553,9 +553,9 @@ var IconMap = {
     }
   }
 });
-// CONCATENATED MODULE: ./packages/result/src/index.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/result/src/index.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var result_srcvue_type_script_lang_js_ = (srcvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./packages/result/src/index.vue
+// CONCATENATED MODULE: ./packages/result/src/index.前端.vue
 
 
 
@@ -576,7 +576,7 @@ var src_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var src_api; }
-src_component.options.__file = "packages/result/src/index.vue"
+src_component.options.__file = "packages/result/src/index.前端.vue"
 /* harmony default export */ var src = (src_component.exports);
 // CONCATENATED MODULE: ./packages/result/index.js
 

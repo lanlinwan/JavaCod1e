@@ -1,6 +1,5 @@
 package service;
 
-import org.apache.ibatis.annotations.Param;
 import pojo.Brand;
 import pojo.PageBean;
 

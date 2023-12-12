@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jspANDservlet:war">
+    <output-path>$PROJECT_DIR$/jspANDservlet/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>jspANDservlet</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jspANDservlet-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jspANDservlet:war exploded" />
+    </root>
+  </artifact>
+</component>

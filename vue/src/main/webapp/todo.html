@@ -27,7 +27,7 @@
     </table>
 </div>
 
-<script src="js/vue.js"></script>
+<script src="js/前端.vue.js"></script>
 <script src="js/axios.min.js"></script>
 
 <script>
@@ -44,7 +44,7 @@
 
             axios({
                 method: "get",
-                url: "http://localhost:8080/vue/selectAllServlet"
+                url: "http://localhost:8080/前端.vue/selectAllServlet"
             }).then(function (resp) {
                 _this.brands = resp.data;
             })

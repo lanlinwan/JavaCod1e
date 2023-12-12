@@ -11,6 +11,7 @@ public class api4 {
             void forEach(Consumer action)           遍历
             long count()                            统计
             toArray()                               收集流中的数据，放到数组中
+            reduce()                                求和
        */
         
 
@@ -36,7 +37,17 @@ public class api4 {
 
         // long count()                            统计
         long count = list.stream().count();
-        System.out.println(count);
+        System.out.println("count:"+count);
+
+        // reduce()
+        ArrayList<Integer> list1 = new ArrayList<>();
+        Collections.addAll(list1, 1,2,3,4,5,7);
+        //求和
+        long count2 = list1.stream().reduce(Integer::sum).get();
+        System.out.println("count2:"+count2);
+        //求最大值
+        long count1 = list1.stream().reduce(Integer::max).get();
+        System.out.println("count1:"+count1);
 
 
 

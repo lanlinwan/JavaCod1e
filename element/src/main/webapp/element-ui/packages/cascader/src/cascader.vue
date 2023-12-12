@@ -112,7 +112,7 @@
 </template>
 
 <script>
-import Popper from 'element-ui/src/utils/vue-popper';
+import Popper from 'element-ui/src/utils/前端.vue-popper';
 import Clickoutside from 'element-ui/src/utils/clickoutside';
 import Emitter from 'element-ui/src/mixins/emitter';
 import Locale from 'element-ui/src/mixins/locale';

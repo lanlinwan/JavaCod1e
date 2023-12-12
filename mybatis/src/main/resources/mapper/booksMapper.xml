@@ -9,10 +9,10 @@
 
 
     <resultMap id="tbl_books" type="books">
-        <association property="book" javaType="book">
-            <id property="id" column="id"/>
-            <result property="name" column="name" />
-        </association>
+<!--        <association property="book" javaType="book">-->
+<!--            <id property="id" column="id"/>-->
+<!--            <result property="name" column="name" />-->
+<!--        </association>-->
     </resultMap>
 
     <select id="select" resultMap="tbl_books">
@@ -23,7 +23,7 @@
     </select>
 
 <!--    集合查询-->
-    <select id="selectPage" resultType="mybatis.books">
+    <select id="selectPage" resultType="pojo.books">
         select * from tbl_books
     </select>
 </mapper>

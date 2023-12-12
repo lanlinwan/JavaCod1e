@@ -72,7 +72,7 @@ npm install element-ui -S
 
 ## Quick Start
 ``` javascript
-import Vue from 'vue'
+import Vue from '前端.vue'
 import Element from 'element-ui'
 
 Vue.use(Element)

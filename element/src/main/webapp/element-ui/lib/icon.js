@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -195,7 +195,7 @@ function normalizeComponent (
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/icon/src/icon.vue?vue&type=template&id=cb3fe7f4&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/icon/src/icon.前端.vue?前端.vue&type=template&id=cb3fe7f4&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -206,9 +206,9 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/icon/src/icon.vue?vue&type=template&id=cb3fe7f4&
+// CONCATENATED MODULE: ./packages/icon/src/icon.前端.vue?前端.vue&type=template&id=cb3fe7f4&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/icon/src/icon.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/icon/src/icon.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -221,12 +221,12 @@ render._withStripped = true
     name: String
   }
 });
-// CONCATENATED MODULE: ./packages/icon/src/icon.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/icon/src/icon.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_iconvue_type_script_lang_js_ = (iconvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/icon/src/icon.vue
+// CONCATENATED MODULE: ./packages/icon/src/icon.前端.vue
 
 
 
@@ -247,7 +247,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/icon/src/icon.vue"
+component.options.__file = "packages/icon/src/icon.前端.vue"
 /* harmony default export */ var icon = (component.exports);
 // CONCATENATED MODULE: ./packages/icon/index.js
 

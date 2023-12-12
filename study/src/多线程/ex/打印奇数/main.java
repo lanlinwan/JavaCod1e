@@ -16,5 +16,6 @@ public class main {
 
         myThread.start();
         myThread1.start();
+        System.out.println("结束");
     }
 }

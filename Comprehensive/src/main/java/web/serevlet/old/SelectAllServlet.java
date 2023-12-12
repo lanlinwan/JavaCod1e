@@ -5,9 +5,9 @@ import pojo.Brand;
 import service.BrandService;
 import service.BrandServiceImpl;
 
+
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 

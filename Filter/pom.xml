@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Filter</artifactId>
+    <artifactId>javaweb.Filter</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -25,10 +25,10 @@
             <version>3.5.10</version>
         </dependency>
 
-        <!-- mysql -->
+        <!-- MysqlS.mysql -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>MysqlS.mysql</groupId>
+            <artifactId>MysqlS.mysql-connector-java</artifactId>
             <version>5.1.46</version>
         </dependency>
 

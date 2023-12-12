@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <typeAliases>
+        <package name="pojo"/>
+    </typeAliases>
+    <!--
+    environments:配置数据库连接环境信息。可以配置多个environment,通过default 属性切换不同的environment
+    -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="MysqlS.JDBC"/>
+            <dataSource type="POOLED">
+                <!--数据库连接信息-->
+                <property name="driver" value="com.MysqlS.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:MysqlS.mysql://127.0.0.1:3306/lan?useSSL=false&amp;severTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="admin123"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!--    加载sql映射文件-->
+        <!--        <mapper resource="mapper/userMapper.xml"/>-->
+
+        <!--        mapper代理方式-->
+        <package name="mapper"/>
+    </mappers>
+
+</configuration>

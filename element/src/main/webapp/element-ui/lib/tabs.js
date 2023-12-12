@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -209,7 +209,7 @@ module.exports = require("element-ui/lib/utils/util");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/tabs/src/tab-bar.vue?vue&type=template&id=2031f33a&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/tabs/src/tab-bar.前端.vue?前端.vue&type=template&id=2031f33a&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -224,12 +224,12 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/tabs/src/tab-bar.vue?vue&type=template&id=2031f33a&
+// CONCATENATED MODULE: ./packages/tabs/src/tab-bar.前端.vue?前端.vue&type=template&id=2031f33a&
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/util"
 var util_ = __webpack_require__(3);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/tabs/src/tab-bar.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/tabs/src/tab-bar.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -294,12 +294,12 @@ var util_ = __webpack_require__(3);
     }
   }
 });
-// CONCATENATED MODULE: ./packages/tabs/src/tab-bar.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/tabs/src/tab-bar.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_tab_barvue_type_script_lang_js_ = (tab_barvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/tabs/src/tab-bar.vue
+// CONCATENATED MODULE: ./packages/tabs/src/tab-bar.前端.vue
 
 
 
@@ -320,12 +320,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/tabs/src/tab-bar.vue"
+component.options.__file = "packages/tabs/src/tab-bar.前端.vue"
 /* harmony default export */ var tab_bar = (component.exports);
 // EXTERNAL MODULE: external "element-ui/lib/utils/resize-event"
 var resize_event_ = __webpack_require__(16);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/tabs/src/tab-nav.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/tabs/src/tab-nav.前端.vue?前端.vue&type=script&lang=js&
 
 
 
@@ -655,9 +655,9 @@ var tab_navvue_type_script_lang_js_firstUpperCase = function firstUpperCase(str)
     window.removeEventListener('focus', this.windowFocusHandler);
   }
 });
-// CONCATENATED MODULE: ./packages/tabs/src/tab-nav.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/tabs/src/tab-nav.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_tab_navvue_type_script_lang_js_ = (tab_navvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./packages/tabs/src/tab-nav.vue
+// CONCATENATED MODULE: ./packages/tabs/src/tab-nav.前端.vue
 var tab_nav_render, tab_nav_staticRenderFns
 
 
@@ -678,9 +678,9 @@ var tab_nav_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var tab_nav_api; }
-tab_nav_component.options.__file = "packages/tabs/src/tab-nav.vue"
+tab_nav_component.options.__file = "packages/tabs/src/tab-nav.前端.vue"
 /* harmony default export */ var tab_nav = (tab_nav_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/tabs/src/tabs.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/tabs/src/tabs.前端.vue?前端.vue&type=script&lang=js&
 
 
 
@@ -885,9 +885,9 @@ tab_nav_component.options.__file = "packages/tabs/src/tab-nav.vue"
     this.calcPaneInstances();
   }
 });
-// CONCATENATED MODULE: ./packages/tabs/src/tabs.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/tabs/src/tabs.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_tabsvue_type_script_lang_js_ = (tabsvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./packages/tabs/src/tabs.vue
+// CONCATENATED MODULE: ./packages/tabs/src/tabs.前端.vue
 var tabs_render, tabs_staticRenderFns
 
 
@@ -908,7 +908,7 @@ var tabs_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var tabs_api; }
-tabs_component.options.__file = "packages/tabs/src/tabs.vue"
+tabs_component.options.__file = "packages/tabs/src/tabs.前端.vue"
 /* harmony default export */ var tabs = (tabs_component.exports);
 // CONCATENATED MODULE: ./packages/tabs/index.js
 

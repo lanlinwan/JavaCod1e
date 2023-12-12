@@ -21,7 +21,7 @@
 
   <body>
     <links>
-      <item name="Maven" href="https://maven.apache.org/"/>
+      <item name="SSM.Maven" href="https://maven.apache.org/"/>
     </links>
 
     <menu name="Documentation">

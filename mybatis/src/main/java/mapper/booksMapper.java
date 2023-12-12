@@ -1,6 +1,6 @@
 package mapper;
 
-import mybatis.books;
+import pojo.books;
 
 import java.util.List;
 

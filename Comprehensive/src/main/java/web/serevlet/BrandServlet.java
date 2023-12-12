@@ -6,6 +6,7 @@ import pojo.PageBean;
 import service.BrandService;
 import service.BrandServiceImpl;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +16,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/brand/*")
-public class BrandServlet extends BaseServlet{
+public class BrandServlet extends BaseServlet {
     private BrandService brandService=new BrandServiceImpl();
 
     public void selectAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

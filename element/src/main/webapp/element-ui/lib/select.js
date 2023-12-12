@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -257,7 +257,7 @@ module.exports = require("element-ui/lib/utils/scroll-into-view");
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/select/src/option.vue?vue&type=template&id=7a44c642&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/select/src/option.前端.vue?前端.vue&type=template&id=7a44c642&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -295,7 +295,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/select/src/option.vue?vue&type=template&id=7a44c642&
+// CONCATENATED MODULE: ./packages/select/src/option.前端.vue?前端.vue&type=template&id=7a44c642&
 
 // EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
 var emitter_ = __webpack_require__(4);
@@ -304,7 +304,7 @@ var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 // EXTERNAL MODULE: external "element-ui/lib/utils/util"
 var util_ = __webpack_require__(3);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/select/src/option.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/select/src/option.前端.vue?前端.vue&type=script&lang=js&
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //
@@ -472,12 +472,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     this.select.onOptionDestroy(this.select.options.indexOf(this));
   }
 });
-// CONCATENATED MODULE: ./packages/select/src/option.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/select/src/option.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_optionvue_type_script_lang_js_ = (optionvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/select/src/option.vue
+// CONCATENATED MODULE: ./packages/select/src/option.前端.vue
 
 
 
@@ -498,7 +498,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/select/src/option.vue"
+component.options.__file = "packages/select/src/option.前端.vue"
 /* harmony default export */ var src_option = __webpack_exports__["a"] = (component.exports);
 
 /***/ }),
@@ -537,7 +537,7 @@ module.exports = require("element-ui/lib/mixins/locale");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/select/src/select.vue?vue&type=template&id=0e4aade6&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/select/src/select.前端.vue?前端.vue&type=template&id=0e4aade6&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -1010,7 +1010,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/select/src/select.vue?vue&type=template&id=0e4aade6&
+// CONCATENATED MODULE: ./packages/select/src/select.前端.vue?前端.vue&type=template&id=0e4aade6&
 
 // EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
 var emitter_ = __webpack_require__(4);
@@ -1028,7 +1028,7 @@ var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 var input_ = __webpack_require__(10);
 var input_default = /*#__PURE__*/__webpack_require__.n(input_);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/select/src/select-dropdown.vue?vue&type=template&id=06828748&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/select/src/select-dropdown.前端.vue?前端.vue&type=template&id=06828748&
 var select_dropdownvue_type_template_id_06828748_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -1048,13 +1048,13 @@ var select_dropdownvue_type_template_id_06828748_staticRenderFns = []
 select_dropdownvue_type_template_id_06828748_render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/select/src/select-dropdown.vue?vue&type=template&id=06828748&
+// CONCATENATED MODULE: ./packages/select/src/select-dropdown.前端.vue?前端.vue&type=template&id=06828748&
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/vue-popper"
+// EXTERNAL MODULE: external "element-ui/lib/utils/前端.vue-popper"
 var vue_popper_ = __webpack_require__(5);
 var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/select/src/select-dropdown.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/select/src/select-dropdown.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -1131,12 +1131,12 @@ var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
     this.$on('destroyPopper', this.destroyPopper);
   }
 });
-// CONCATENATED MODULE: ./packages/select/src/select-dropdown.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/select/src/select-dropdown.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_select_dropdownvue_type_script_lang_js_ = (select_dropdownvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/select/src/select-dropdown.vue
+// CONCATENATED MODULE: ./packages/select/src/select-dropdown.前端.vue
 
 
 
@@ -1157,9 +1157,9 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/select/src/select-dropdown.vue"
+component.options.__file = "packages/select/src/select-dropdown.前端.vue"
 /* harmony default export */ var select_dropdown = (component.exports);
-// EXTERNAL MODULE: ./packages/select/src/option.vue + 4 modules
+// EXTERNAL MODULE: ./packages/select/src/option.前端.vue + 4 modules
 var src_option = __webpack_require__(33);
 
 // EXTERNAL MODULE: external "element-ui/lib/tag"
@@ -1255,7 +1255,7 @@ var util_ = __webpack_require__(3);
 // EXTERNAL MODULE: external "element-ui/lib/utils/shared"
 var shared_ = __webpack_require__(21);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/select/src/select.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/select/src/select.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -2132,9 +2132,9 @@ var shared_ = __webpack_require__(21);
     if (this.$el && this.handleResize) Object(resize_event_["removeResizeListener"])(this.$el, this.handleResize);
   }
 });
-// CONCATENATED MODULE: ./packages/select/src/select.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/select/src/select.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_selectvue_type_script_lang_js_ = (selectvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./packages/select/src/select.vue
+// CONCATENATED MODULE: ./packages/select/src/select.前端.vue
 
 
 
@@ -2155,7 +2155,7 @@ var select_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var select_api; }
-select_component.options.__file = "packages/select/src/select.vue"
+select_component.options.__file = "packages/select/src/select.前端.vue"
 /* harmony default export */ var src_select = (select_component.exports);
 // CONCATENATED MODULE: ./packages/select/index.js
 

@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/ExBrand/ExBrand.iml" filepath="$PROJECT_DIR$/ExBrand/ExBrand.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExLogin/ExLogin.iml" filepath="$PROJECT_DIR$/ExLogin/ExLogin.iml" />
       <module fileurl="file://$PROJECT_DIR$/Filter/Filter.iml" filepath="$PROJECT_DIR$/Filter/Filter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JavaWeb/JavaWeb.iml" filepath="$PROJECT_DIR$/JavaWeb/JavaWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/oracle/Oracle.iml" filepath="$PROJECT_DIR$/oracle/Oracle.iml" />
       <module fileurl="file://$PROJECT_DIR$/Redis-Spring/Redis-Spring.iml" filepath="$PROJECT_DIR$/Redis-Spring/Redis-Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/Redis-jedis/Redis-jedis.iml" filepath="$PROJECT_DIR$/Redis-jedis/Redis-jedis.iml" />
@@ -17,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/Vuex/Vuex.iml" filepath="$PROJECT_DIR$/Vuex/Vuex.iml" />
       <module fileurl="file://$PROJECT_DIR$/element/element.iml" filepath="$PROJECT_DIR$/element/element.iml" />
       <module fileurl="file://$PROJECT_DIR$/study/email/email.iml" filepath="$PROJECT_DIR$/study/email/email.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jspANDservlet/jspANDservlet.iml" filepath="$PROJECT_DIR$/jspANDservlet/jspANDservlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/loginJson/loginJson.iml" filepath="$PROJECT_DIR$/loginJson/loginJson.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven/maven.iml" filepath="$PROJECT_DIR$/maven/maven.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven1/maven1.iml" filepath="$PROJECT_DIR$/maven1/maven1.iml" />
@@ -24,8 +24,9 @@
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/oracle1/oracle1.iml" filepath="$PROJECT_DIR$/oracle1/oracle1.iml" />
       <module fileurl="file://$PROJECT_DIR$/oracle2/oracle2.iml" filepath="$PROJECT_DIR$/oracle2/oracle2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomact-demo1/requestANDreponse.iml" filepath="$PROJECT_DIR$/tomact-demo1/requestANDreponse.iml" />
       <module fileurl="file://$PROJECT_DIR$/study/study.iml" filepath="$PROJECT_DIR$/study/study.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tomact-demo1/tomact-demo1.iml" filepath="$PROJECT_DIR$/tomact-demo1/tomact-demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/技术栈/技术栈.iml" filepath="$PROJECT_DIR$/技术栈/技术栈.iml" />
     </modules>
   </component>
 </project>

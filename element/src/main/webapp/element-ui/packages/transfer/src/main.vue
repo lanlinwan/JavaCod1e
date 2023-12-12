@@ -45,7 +45,7 @@
   import ElButton from 'element-ui/packages/button';
   import Emitter from 'element-ui/src/mixins/emitter';
   import Locale from 'element-ui/src/mixins/locale';
-  import TransferPanel from './transfer-panel.vue';
+  import TransferPanel from './transfer-panel.前端.vue';
   import Migrating from 'element-ui/src/mixins/migrating';
 
   export default {

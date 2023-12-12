@@ -9,14 +9,15 @@
     <file type="web" url="file://$PROJECT_DIR$/ExBrand" />
     <file type="web" url="file://$PROJECT_DIR$/ExLogin" />
     <file type="web" url="file://$PROJECT_DIR$/Filter" />
+    <file type="web" url="file://$PROJECT_DIR$/jspANDservlet" />
     <file type="web" url="file://$PROJECT_DIR$/loginJson" />
     <file type="web" url="file://$PROJECT_DIR$/maven" />
     <file type="web" url="file://$PROJECT_DIR$/maven1" />
     <file type="web" url="file://$PROJECT_DIR$/mavenAdvanced" />
-    <file type="web" url="file://$PROJECT_DIR$/tomact-demo1" />
+    <file type="web" url="file://$PROJECT_DIR$/requestANDreponse" />
     <file type="web" url="file://$PROJECT_DIR$/tomcat1" />
-    <file type="web" url="file://$PROJECT_DIR$/untitled" />
     <file type="web" url="file://$PROJECT_DIR$/vue" />
+    <file type="web" url="file://$PROJECT_DIR$/技术栈" />
     <file type="web" url="file://$PROJECT_DIR$/../JavaWeb/ajax" />
   </component>
   <component name="MavenProjectsManager">
@@ -46,6 +47,9 @@
         <option value="$PROJECT_DIR$/oracle2/pom.xml" />
         <option value="$PROJECT_DIR$/Redis-jedis/pom.xml" />
         <option value="$PROJECT_DIR$/Redis-Spring/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/jspANDservlet/pom.xml" />
+        <option value="$PROJECT_DIR$/技术栈/pom.xml" />
       </list>
     </option>
   </component>

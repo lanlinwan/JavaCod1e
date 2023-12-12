@@ -22,6 +22,7 @@ public class registerServlet extends HttpServlet {
         login login=new login();
         login.setLoginName(loginName);
         login.setLoginPwd(loginPwd);
+        System.out.println(login);
 
         //调用mapper 根据用户名查询
         SqlSessionFactory sqlSessionFactory= SqlSessionUtils.getSqlSessionFactory();

@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -251,7 +251,7 @@ module.exports = require("element-ui/lib/mixins/focus");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/input-number/src/input-number.vue?vue&type=template&id=42f8cf66&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/input-number/src/input-number.前端.vue?前端.vue&type=template&id=42f8cf66&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -396,7 +396,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/input-number/src/input-number.vue?vue&type=template&id=42f8cf66&
+// CONCATENATED MODULE: ./packages/input-number/src/input-number.前端.vue?前端.vue&type=template&id=42f8cf66&
 
 // EXTERNAL MODULE: external "element-ui/lib/input"
 var input_ = __webpack_require__(10);
@@ -409,7 +409,7 @@ var focus_default = /*#__PURE__*/__webpack_require__.n(focus_);
 // EXTERNAL MODULE: ./src/directives/repeat-click.js
 var repeat_click = __webpack_require__(30);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/input-number/src/input-number.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/input-number/src/input-number.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -697,12 +697,12 @@ var repeat_click = __webpack_require__(30);
     innerInput.setAttribute('aria-valuenow', this.currentValue);
   }
 });
-// CONCATENATED MODULE: ./packages/input-number/src/input-number.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/input-number/src/input-number.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_input_numbervue_type_script_lang_js_ = (input_numbervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/input-number/src/input-number.vue
+// CONCATENATED MODULE: ./packages/input-number/src/input-number.前端.vue
 
 
 
@@ -723,7 +723,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/input-number/src/input-number.vue"
+component.options.__file = "packages/input-number/src/input-number.前端.vue"
 /* harmony default export */ var input_number = (component.exports);
 // CONCATENATED MODULE: ./packages/input-number/index.js
 

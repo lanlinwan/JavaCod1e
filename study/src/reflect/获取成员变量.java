@@ -22,13 +22,14 @@ public class 获取成员变量 {
         Class clazz = Class.forName("reflect.Student");
 
         //2.获取所有的成员变量
-       /* Field[] fields = clazz.getDeclaredFields();
-        for (Field field : fields) {
-            System.out.println(field);
-        }*/
+//         Field[] fields = clazz.getDeclaredFields();
+//        for (Field field : fields) {
+//            System.out.println(field);
+//        }
 
         //获取单个的成员变量
         Field name = clazz.getDeclaredField("name");
+        Field age = clazz.getDeclaredField("age");
         System.out.println(name);
 
         //获取权限修饰符
@@ -47,12 +48,14 @@ public class 获取成员变量 {
         Student s = new Student("zhangsan",23,"男");
         name.setAccessible(true);
         String value = (String) name.get(s);
-        System.out.println(value);
+        System.out.println("value:"+value);
 
         //修改对象里面记录的值
-        name.set(s,"lisi");
+        name.set(s,"lan");
+        age.setAccessible(true);
+        age.set(s,66);
 
-        System.out.println(s);
+        System.out.println("s:"+s);
 
 
     }

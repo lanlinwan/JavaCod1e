@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -232,7 +232,7 @@ var button_group_default = /*#__PURE__*/__webpack_require__.n(button_group_);
 // EXTERNAL MODULE: external "element-ui/lib/utils/util"
 var util_ = __webpack_require__(3);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/dropdown/src/dropdown.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/dropdown/src/dropdown.前端.vue?前端.vue&type=script&lang=js&
 
 
 
@@ -571,12 +571,12 @@ var util_ = __webpack_require__(3);
     );
   }
 });
-// CONCATENATED MODULE: ./packages/dropdown/src/dropdown.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/dropdown/src/dropdown.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_dropdownvue_type_script_lang_js_ = (dropdownvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/dropdown/src/dropdown.vue
+// CONCATENATED MODULE: ./packages/dropdown/src/dropdown.前端.vue
 var render, staticRenderFns
 
 
@@ -597,7 +597,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/dropdown/src/dropdown.vue"
+component.options.__file = "packages/dropdown/src/dropdown.前端.vue"
 /* harmony default export */ var dropdown = (component.exports);
 // CONCATENATED MODULE: ./packages/dropdown/index.js
 

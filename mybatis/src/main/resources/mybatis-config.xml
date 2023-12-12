@@ -20,9 +20,9 @@
           type:设置需要设置别名的类型
           alias:设置某个类型的别名，若不设置该属性，那么该类型拥有默认的别名，即类名且不区分
         -->
-        <typeAlias type="mybatis.user" alias="user"/>
+        <typeAlias type="pojo.user" alias="user"/>
         <!--以包为单位，将包下所有的类型设置默认的类型别名，即类名且不区分大小写-->
-        <package name="mybatis.user"/>
+        <package name="pojo.user"/>
     </typeAliases>
 
     <plugins>
@@ -38,13 +38,13 @@
             <!--
             transact ionManager:设置事务管理方式
             属性:
-             type= "JDBC /MANAGED”
-               JDBC:表示当前环境中，执行SQL时,使用的是JDBC中原生的事务管理方式，
+             type= "MysqlS.JDBC /MANAGED”
+               MysqlS.JDBC:表示当前环境中，执行SQL时,使用的是JDBC中原生的事务管理方式，
                     事务的提交或回滚需要手动处理
                MANAGED:被管理，例Spring
             -->
+            <transactionManager type="MANAGED"/>
 
-            <transactionManager type="JDBC"/>
             <!--
                 dataSource:配置数据源
                 属性:
@@ -56,10 +56,10 @@
             -->
             <dataSource type="POOLED">
                 <!--数据库连接信息-->
-                <property name="driver" value="${driver}"/>
-                <property name="url" value="url"/>
-                <property name="username" value="${}"/>
-                <property name="password" value="${password}"/>
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/lan?useSSL=false&amp;severTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="admin123"/>
             </dataSource>
         </environment>
     </environments>

@@ -1,21 +1,19 @@
 package web.serevlet;
 
-import com.alibaba.fastjson.JSON;
-import pojo.Brand;
+
 import pojo.tbl_login;
 import service.loginServicelmpl;
+import web.serevlet.BaseServlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet("/register/*")
-public class register extends BaseServlet{
-    loginServicelmpl  loginServicelmpl=new loginServicelmpl();
+public class register extends BaseServlet {
+    service.loginServicelmpl loginServicelmpl=new loginServicelmpl();
 
 
 

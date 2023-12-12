@@ -60,7 +60,7 @@ public class threadLocal {
 
         private static Connection innerGetConnection() {
             try {
-                return DriverManager.getConnection("jdbc:mysql://localhost:3306/lan?useSSL=false", "root", "admin123");
+                return DriverManager.getConnection("jdbc:MysqlS.mysql://localhost:3306/lan?useSSL=false", "root", "admin123");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }

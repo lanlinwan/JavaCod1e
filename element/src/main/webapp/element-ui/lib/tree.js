@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -237,7 +237,7 @@ module.exports = require("element-ui/lib/mixins/emitter");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/tree/src/tree.vue?vue&type=template&id=547575a6&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/tree/src/tree.前端.vue?前端.vue&type=template&id=547575a6&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -295,7 +295,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/tree/src/tree.vue?vue&type=template&id=547575a6&
+// CONCATENATED MODULE: ./packages/tree/src/tree.前端.vue?前端.vue&type=template&id=547575a6&
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/merge"
 var merge_ = __webpack_require__(9);
@@ -1257,7 +1257,7 @@ var tree_store_TreeStore = function () {
 
 /* harmony default export */ var tree_store = (tree_store_TreeStore);
 ;
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/tree/src/tree-node.vue?vue&type=template&id=3ba3ef0e&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/tree/src/tree-node.前端.vue?前端.vue&type=template&id=3ba3ef0e&
 var tree_nodevue_type_template_id_3ba3ef0e_render = function() {
   var this$1 = this
   var _vm = this
@@ -1413,7 +1413,7 @@ var tree_nodevue_type_template_id_3ba3ef0e_staticRenderFns = []
 tree_nodevue_type_template_id_3ba3ef0e_render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/tree/src/tree-node.vue?vue&type=template&id=3ba3ef0e&
+// CONCATENATED MODULE: ./packages/tree/src/tree-node.前端.vue?前端.vue&type=template&id=3ba3ef0e&
 
 // EXTERNAL MODULE: external "element-ui/lib/transitions/collapse-transition"
 var collapse_transition_ = __webpack_require__(28);
@@ -1427,7 +1427,7 @@ var checkbox_default = /*#__PURE__*/__webpack_require__.n(checkbox_);
 var emitter_ = __webpack_require__(4);
 var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/tree/src/tree-node.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/tree/src/tree-node.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -1703,12 +1703,12 @@ var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
     }
   }
 });
-// CONCATENATED MODULE: ./packages/tree/src/tree-node.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/tree/src/tree-node.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_tree_nodevue_type_script_lang_js_ = (tree_nodevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/tree/src/tree-node.vue
+// CONCATENATED MODULE: ./packages/tree/src/tree-node.前端.vue
 
 
 
@@ -1729,7 +1729,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/tree/src/tree-node.vue"
+component.options.__file = "packages/tree/src/tree-node.前端.vue"
 /* harmony default export */ var tree_node = (component.exports);
 // EXTERNAL MODULE: external "element-ui/lib/locale"
 var locale_ = __webpack_require__(20);
@@ -1737,7 +1737,7 @@ var locale_ = __webpack_require__(20);
 // EXTERNAL MODULE: external "element-ui/lib/utils/dom"
 var dom_ = __webpack_require__(2);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/tree/src/tree.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/tree/src/tree.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -2218,9 +2218,9 @@ var dom_ = __webpack_require__(2);
     this.checkboxItems = this.$el.querySelectorAll('input[type=checkbox]');
   }
 });
-// CONCATENATED MODULE: ./packages/tree/src/tree.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/tree/src/tree.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_treevue_type_script_lang_js_ = (treevue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./packages/tree/src/tree.vue
+// CONCATENATED MODULE: ./packages/tree/src/tree.前端.vue
 
 
 
@@ -2241,7 +2241,7 @@ var tree_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var tree_api; }
-tree_component.options.__file = "packages/tree/src/tree.vue"
+tree_component.options.__file = "packages/tree/src/tree.前端.vue"
 /* harmony default export */ var tree = (tree_component.exports);
 // CONCATENATED MODULE: ./packages/tree/index.js
 

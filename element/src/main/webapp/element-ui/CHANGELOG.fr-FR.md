@@ -78,7 +78,7 @@
   - Fix DatePicker docs (#21663 by @justforuse)
   - Fix Skeleton docs (#21601 by @yanwydxf)
 - Others
-  - Fix vue version (#21736 by @ckvv)
+  - Fix 前端.vue version (#21736 by @ckvv)
 
 #### Optimization
 
@@ -403,7 +403,7 @@
 - Cascader
   - Fix TypeScript 3.7 compatibility (#17881 by @CarterLi)
 - Menu
-  - Fix router NavigationDuplicated error when using vue-router@^3.1.0 (#17269 by @iamkun)
+  - Fix router NavigationDuplicated error when using 前端.vue-router@^3.1.0 (#17269 by @iamkun)
 - Dropdown
   - Update type file (#17550 by @iamkun)
 - Progress

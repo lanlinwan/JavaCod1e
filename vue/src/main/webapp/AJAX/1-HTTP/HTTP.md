@@ -1,11 +1,11 @@
-# HTTP
-HTTP（hypertext transport protocol）协议『超文本传输协议』，协议详细规定了浏览器和万维网服务器之间互相通信的规则。
+# javaweb.HTTP
+javaweb.HTTP（hypertext transport protocol）协议『超文本传输协议』，协议详细规定了浏览器和万维网服务器之间互相通信的规则。
 约定, 规则
 
 ## 请求报文
 重点是格式与参数
 ```
-行      POST  /s?ie=utf-8  HTTP/1.1 
+行      POST  /s?ie=utf-8  javaweb.HTTP/1.1 
 头      Host: atguigu.com
         Cookie: name=guigu
         Content-type: application/x-www-form-urlencoded
@@ -16,7 +16,7 @@ HTTP（hypertext transport protocol）协议『超文本传输协议』，协议
 
 ## 响应报文
 ```
-行      HTTP/1.1  200  OK
+行      javaweb.HTTP/1.1  200  OK
 头      Content-Type: text/html;charset=utf-8
         Content-length: 2048
         Content-encoding: gzip

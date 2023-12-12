@@ -105,7 +105,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -164,7 +164,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -634,7 +634,7 @@ module.exports = require("normalize-wheel");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/table/src/table.vue?vue&type=template&id=493fe34e&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/table/src/table.前端.vue?前端.vue&type=template&id=493fe34e&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -1074,7 +1074,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/table/src/table.vue?vue&type=template&id=493fe34e&
+// CONCATENATED MODULE: ./packages/table/src/table.前端.vue?前端.vue&type=template&id=493fe34e&
 
 // EXTERNAL MODULE: external "element-ui/lib/checkbox"
 var checkbox_ = __webpack_require__(18);
@@ -1117,7 +1117,7 @@ var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 var migrating_ = __webpack_require__(11);
 var migrating_default = /*#__PURE__*/__webpack_require__.n(migrating_);
 
-// EXTERNAL MODULE: external "vue"
+// EXTERNAL MODULE: external "前端.vue"
 var external_vue_ = __webpack_require__(7);
 var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 
@@ -3094,7 +3094,7 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/table/src/filter-panel.vue?vue&type=template&id=7f2c919f&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/table/src/filter-panel.前端.vue?前端.vue&type=template&id=7f2c919f&
 var filter_panelvue_type_template_id_7f2c919f_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -3241,9 +3241,9 @@ var filter_panelvue_type_template_id_7f2c919f_staticRenderFns = []
 filter_panelvue_type_template_id_7f2c919f_render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/table/src/filter-panel.vue?vue&type=template&id=7f2c919f&
+// CONCATENATED MODULE: ./packages/table/src/filter-panel.前端.vue?前端.vue&type=template&id=7f2c919f&
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/vue-popper"
+// EXTERNAL MODULE: external "element-ui/lib/utils/前端.vue-popper"
 var vue_popper_ = __webpack_require__(5);
 var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
 
@@ -3290,7 +3290,7 @@ var checkbox_group_default = /*#__PURE__*/__webpack_require__.n(checkbox_group_)
 var scrollbar_ = __webpack_require__(15);
 var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/table/src/filter-panel.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/table/src/filter-panel.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -3486,12 +3486,12 @@ var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
     }
   }
 });
-// CONCATENATED MODULE: ./packages/table/src/filter-panel.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/table/src/filter-panel.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_filter_panelvue_type_script_lang_js_ = (filter_panelvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/table/src/filter-panel.vue
+// CONCATENATED MODULE: ./packages/table/src/filter-panel.前端.vue
 
 
 
@@ -3512,7 +3512,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/table/src/filter-panel.vue"
+component.options.__file = "packages/table/src/filter-panel.前端.vue"
 /* harmony default export */ var filter_panel = (component.exports);
 // CONCATENATED MODULE: ./packages/table/src/table-header.js
 var table_header_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -4221,7 +4221,7 @@ var table_footer_extends = Object.assign || function (target) { for (var i = 1; 
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/table/src/table.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/table/src/table.前端.vue?前端.vue&type=script&lang=js&
 var tablevue_type_script_lang_js_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 //
@@ -4935,9 +4935,9 @@ var tableIdSeed = 1;
     };
   }
 });
-// CONCATENATED MODULE: ./packages/table/src/table.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/table/src/table.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_tablevue_type_script_lang_js_ = (tablevue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./packages/table/src/table.vue
+// CONCATENATED MODULE: ./packages/table/src/table.前端.vue
 
 
 
@@ -4958,7 +4958,7 @@ var table_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var table_api; }
-table_component.options.__file = "packages/table/src/table.vue"
+table_component.options.__file = "packages/table/src/table.前端.vue"
 /* harmony default export */ var src_table = (table_component.exports);
 // CONCATENATED MODULE: ./packages/table/index.js
 

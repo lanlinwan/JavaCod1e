@@ -33,6 +33,7 @@ public class main {
         System.out.println(a);
         //2.指定索引位置插入元素
         a.add(1,66);
+
         System.out.println(a);
 
     }

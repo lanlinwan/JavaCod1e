@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -202,7 +202,7 @@ module.exports = require("element-ui/lib/locale");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/empty/src/index.vue?vue&type=template&id=347ced91&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/empty/src/index.前端.vue?前端.vue&type=template&id=347ced91&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -239,9 +239,9 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/empty/src/index.vue?vue&type=template&id=347ced91&
+// CONCATENATED MODULE: ./packages/empty/src/index.前端.vue?前端.vue&type=template&id=347ced91&
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/empty/src/img-empty.vue?vue&type=template&id=42918b82&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/empty/src/img-empty.前端.vue?前端.vue&type=template&id=42918b82&
 var img_emptyvue_type_template_id_42918b82_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -475,9 +475,9 @@ var img_emptyvue_type_template_id_42918b82_staticRenderFns = []
 img_emptyvue_type_template_id_42918b82_render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/empty/src/img-empty.vue?vue&type=template&id=42918b82&
+// CONCATENATED MODULE: ./packages/empty/src/img-empty.前端.vue?前端.vue&type=template&id=42918b82&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/empty/src/img-empty.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/empty/src/img-empty.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -609,12 +609,12 @@ var id = 0;
     };
   }
 });
-// CONCATENATED MODULE: ./packages/empty/src/img-empty.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/empty/src/img-empty.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_img_emptyvue_type_script_lang_js_ = (img_emptyvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/empty/src/img-empty.vue
+// CONCATENATED MODULE: ./packages/empty/src/img-empty.前端.vue
 
 
 
@@ -635,12 +635,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/empty/src/img-empty.vue"
+component.options.__file = "packages/empty/src/img-empty.前端.vue"
 /* harmony default export */ var img_empty = (component.exports);
 // EXTERNAL MODULE: external "element-ui/lib/locale"
 var locale_ = __webpack_require__(20);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/empty/src/index.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/empty/src/index.前端.vue?前端.vue&type=script&lang=js&
 var _components;
 
 //
@@ -690,9 +690,9 @@ var _components;
     }
   }
 });
-// CONCATENATED MODULE: ./packages/empty/src/index.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/empty/src/index.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var empty_srcvue_type_script_lang_js_ = (srcvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./packages/empty/src/index.vue
+// CONCATENATED MODULE: ./packages/empty/src/index.前端.vue
 
 
 
@@ -713,7 +713,7 @@ var src_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var src_api; }
-src_component.options.__file = "packages/empty/src/index.vue"
+src_component.options.__file = "packages/empty/src/index.前端.vue"
 /* harmony default export */ var src = (src_component.exports);
 // CONCATENATED MODULE: ./packages/empty/index.js
 

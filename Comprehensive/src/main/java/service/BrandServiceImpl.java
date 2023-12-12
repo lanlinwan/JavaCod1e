@@ -5,6 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import pojo.Brand;
 import pojo.PageBean;
+import service.BrandService;
 import util.SqlSessionUtils;
 
 import java.util.List;

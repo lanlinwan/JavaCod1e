@@ -32,10 +32,10 @@
             <version>3.5.10</version>
         </dependency>
 
-        <!-- mysql -->
+        <!-- MysqlS.mysql -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>MysqlS.mysql</groupId>
+            <artifactId>MysqlS.mysql-connector-java</artifactId>
             <version>5.1.46</version>
         </dependency>
 

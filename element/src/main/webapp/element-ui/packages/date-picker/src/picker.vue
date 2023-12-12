@@ -84,10 +84,10 @@
 </template>
 
 <script>
-import Vue from 'vue';
+import Vue from '前端.vue';
 import Clickoutside from 'element-ui/src/utils/clickoutside';
 import { formatDate, parseDate, isDateObject, getWeekNumber } from 'element-ui/src/utils/date-util';
-import Popper from 'element-ui/src/utils/vue-popper';
+import Popper from 'element-ui/src/utils/前端.vue-popper';
 import Emitter from 'element-ui/src/mixins/emitter';
 import ElInput from 'element-ui/packages/input';
 import merge from 'element-ui/src/utils/merge';
@@ -600,7 +600,7 @@ export default {
   },
 
   created() {
-    // vue-popper
+    // 前端.vue-popper
     this.popperOptions = {
       boundariesPadding: 0,
       gpuAcceleration: false

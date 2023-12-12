@@ -29,7 +29,7 @@
   <!--定义属性-->
   <properties>
     <spring.version>5.2.20.RELEASE</spring.version>
-<!--    <jdbc.url>jdbc:mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>-->
+<!--    <jdbc.url>jdbc:MysqlS.mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>-->
   </properties>
 
   <build>
@@ -76,14 +76,14 @@
       <profile>
         <id>env_dep</id>
         <properties>
-          <jdbc.url>jdbc:mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>
+          <jdbc.url>jdbc:MysqlS.mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>
         </properties>
       </profile>
       <!--生产环境-->
     <profile>
       <id>env_pro</id>
       <properties>
-        <jdbc.url>jdbc:mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>
+        <jdbc.url>jdbc:MysqlS.mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>
       </properties>
       <!--设定是否为默认启动环境-->
       <activation>
@@ -94,7 +94,7 @@
     <profile>
       <id>env_test</id>
       <properties>
-        <jdbc.url>jdbc:mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>
+        <jdbc.url>jdbc:MysqlS.mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>
       </properties>
     </profile>
   </profiles>
@@ -134,8 +134,8 @@
     </dependency>
 
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
+      <groupId>MysqlS.mysql</groupId>
+      <artifactId>MysqlS.mysql-connector-java</artifactId>
       <version>5.1.46</version>
     </dependency>
 

@@ -78,7 +78,7 @@
   - 修复 DatePicker 文案 (#21663 by @justforuse)
   - 修复 Skeleton 文案 (#21601 by @yanwydxf)
 - 其他
-  - 修复 vue 版本(#21736 by @ckvv)
+  - 修复 前端.vue 版本(#21736 by @ckvv)
 
 #### 优化
 
@@ -402,7 +402,7 @@
 - Cascader
   - 修复 TypeScript 3.7 的兼容问题 (#17881 by @CarterLi)
 - Menu
-  - 修复 NavigationDuplicated 在 vue-router@^3.1.0 的报错 (#17269 by @iamkun)
+  - 修复 NavigationDuplicated 在 前端.vue-router@^3.1.0 的报错 (#17269 by @iamkun)
 - Dropdown
   - 更新类型文件 (#17550 by @iamkun)
 - Progress

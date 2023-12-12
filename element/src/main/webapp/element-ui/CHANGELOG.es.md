@@ -78,7 +78,7 @@
   - Fix DatePicker docs (#21663 by @justforuse)
   - Fix Skeleton docs (#21601 by @yanwydxf)
 - Others
-  - Fix vue version (#21736 by @ckvv)
+  - Fix 前端.vue version (#21736 by @ckvv)
 
 #### Optimization
 
@@ -402,7 +402,7 @@
 - Cascader
   - Corregida la compatibilidad con TypeScript 3.7 (#17881 by @CarterLi)
 - Menu
-  - Corregido el error de la ruta de navegación duplicada cuando se usaba vue-router@^3.1.0 (#17269 by @iamkun)
+  - Corregido el error de la ruta de navegación duplicada cuando se usaba 前端.vue-router@^3.1.0 (#17269 by @iamkun)
 - Dropdown
   - Actualización del tipo de archivo (#17550 by @iamkun)
 - Progress
@@ -1341,7 +1341,7 @@
 - Corregidos los valores incorrectos seleccionados por Cascader, #12508 (por @huangjinqiang)
 - Corregido el valor incorrecto del input de Paginación, #12525
 - Se ha corregido el orden en que la paginación desencadena los eventos, #12530
-- Corregido que no se mostraba el Table Filter, #12539
+- Corregido que no se mostraba el Table javaweb.Filter, #12539
 - Corregido Tree que era incapaz de borrar nodos, #12684
 - Corregida la altura de los Select Input que cambiaba en modo simple, #12719
 - Arreglado el estilo de la etiqueta FormItem en Form anidado, #12748

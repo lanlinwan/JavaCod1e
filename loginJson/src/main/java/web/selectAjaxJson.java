@@ -23,6 +23,7 @@ public class selectAjaxJson extends HttpServlet {
         List<todo> todos=todoService.selectAll();
         //2.将集合转换为JSON数据  序列化
         String jsonString= JSON.toJSONString(todos);
+        System.out.println(jsonString);
         //3.响应数据
         resp.setContentType("text/json;charset=utf-8");
         resp.getWriter().write(jsonString);

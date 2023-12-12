@@ -1,5 +1,5 @@
 package mapper;
-import mybatis.user;
+import pojo.user;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 

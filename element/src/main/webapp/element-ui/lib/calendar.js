@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -230,7 +230,7 @@ module.exports = require("element-ui/lib/mixins/locale");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/calendar/src/main.vue?vue&type=template&id=6d9756be&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/calendar/src/main.前端.vue?前端.vue&type=template&id=6d9756be&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -350,7 +350,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/calendar/src/main.vue?vue&type=template&id=6d9756be&
+// CONCATENATED MODULE: ./packages/calendar/src/main.前端.vue?前端.vue&type=template&id=6d9756be&
 
 // EXTERNAL MODULE: external "element-ui/lib/mixins/locale"
 var locale_ = __webpack_require__(6);
@@ -371,7 +371,7 @@ var button_group_default = /*#__PURE__*/__webpack_require__.n(button_group_);
 // EXTERNAL MODULE: external "element-ui/lib/utils/date-util"
 var date_util_ = __webpack_require__(1);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/calendar/src/date-table.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/calendar/src/date-table.前端.vue?前端.vue&type=script&lang=js&
 
 
 
@@ -597,12 +597,12 @@ var date_util_ = __webpack_require__(1);
     );
   }
 });
-// CONCATENATED MODULE: ./packages/calendar/src/date-table.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/calendar/src/date-table.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_date_tablevue_type_script_lang_js_ = (date_tablevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/calendar/src/date-table.vue
+// CONCATENATED MODULE: ./packages/calendar/src/date-table.前端.vue
 var date_table_render, date_table_staticRenderFns
 
 
@@ -623,9 +623,9 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/calendar/src/date-table.vue"
+component.options.__file = "packages/calendar/src/date-table.前端.vue"
 /* harmony default export */ var date_table = (component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/calendar/src/main.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/calendar/src/main.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -895,9 +895,9 @@ var oneDay = 86400000;
     };
   }
 });
-// CONCATENATED MODULE: ./packages/calendar/src/main.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/calendar/src/main.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_mainvue_type_script_lang_js_ = (mainvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./packages/calendar/src/main.vue
+// CONCATENATED MODULE: ./packages/calendar/src/main.前端.vue
 
 
 
@@ -918,7 +918,7 @@ var main_component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var main_api; }
-main_component.options.__file = "packages/calendar/src/main.vue"
+main_component.options.__file = "packages/calendar/src/main.前端.vue"
 /* harmony default export */ var main = (main_component.exports);
 // CONCATENATED MODULE: ./packages/calendar/index.js
 

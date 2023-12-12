@@ -204,7 +204,9 @@
 </div>
 
 <script src="js/axios.min.js"></script>
+<!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
 <script>
+  import axios from 'axios'
   const container = document.getElementsByClassName('container')[0];
   const signIn = document.getElementById('sign-in');
   const signUp = document.getElementById('sign-up');
@@ -224,7 +226,7 @@
     const email = loginemail.value;
     const password = loginpassword.value;
     //alert(email,password);
-    axios({
+    this.axios({
       method:"post",
       url:"http://localhost:8080/Comprehensive/login/login?email="+email+"&password="+password,
 

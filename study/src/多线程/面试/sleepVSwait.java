@@ -9,6 +9,7 @@ public class sleepVSwait {
     //①sleep(long) 是Thread的静态方法
     //②而wait(), wait(long) 都是Object的成员方法,每个对象都有
 
+
     //醒来时机不同
     //①执行 sleep(long)和wait(long)的线程都会在等待相应毫秒后醒来
     //②wait(long) 和wait()还可以被notify唤醒, wait() 如果不唤醒就- -直等 下去

@@ -496,14 +496,14 @@
       }
       catch (e) { }
   }
-  // this needs to be lazy-evaled because vue may be required before
-  // vue-server-renderer can set VUE_ENV
+  // this needs to be lazy-evaled because 前端.vue may be required before
+  // 前端.vue-server-renderer can set VUE_ENV
   var _isServer;
   var isServerRendering = function () {
       if (_isServer === undefined) {
           /* istanbul ignore if */
           if (!inBrowser && typeof global !== 'undefined') {
-              // detect presence of vue-server-renderer and avoid
+              // detect presence of 前端.vue-server-renderer and avoid
               // Webpack shimming the process
               _isServer =
                   global['process'] && global['process'].env.VUE_ENV === 'server';
@@ -2903,16 +2903,16 @@
           updateComponent = function () {
               var name = vm._name;
               var id = vm._uid;
-              var startTag = "vue-perf-start:".concat(id);
-              var endTag = "vue-perf-end:".concat(id);
+              var startTag = "前端.vue-perf-start:".concat(id);
+              var endTag = "前端.vue-perf-end:".concat(id);
               mark(startTag);
               var vnode = vm._render();
               mark(endTag);
-              measure("vue ".concat(name, " render"), startTag, endTag);
+              measure("前端.vue ".concat(name, " render"), startTag, endTag);
               mark(startTag);
               vm._update(vnode, hydrating);
               mark(endTag);
-              measure("vue ".concat(name, " patch"), startTag, endTag);
+              measure("前端.vue ".concat(name, " patch"), startTag, endTag);
           };
       }
       else {
@@ -3963,7 +3963,7 @@
   }
 
   /**
-   * Note: also update dist/vue.runtime.mjs when adding new exports to this file.
+   * Note: also update dist/前端.vue.runtime.mjs when adding new exports to this file.
    */
   var version = '2.7.10';
   /**
@@ -4646,8 +4646,8 @@
           var startTag, endTag;
           /* istanbul ignore if */
           if (config.performance && mark) {
-              startTag = "vue-perf-start:".concat(vm._uid);
-              endTag = "vue-perf-end:".concat(vm._uid);
+              startTag = "前端.vue-perf-start:".concat(vm._uid);
+              endTag = "前端.vue-perf-end:".concat(vm._uid);
               mark(startTag);
           }
           // a flag to mark this as a Vue instance without having to do instanceof
@@ -4686,7 +4686,7 @@
           if (config.performance && mark) {
               vm._name = formatComponentName(vm, false);
               mark(endTag);
-              measure("vue ".concat(vm._name, " init"), startTag, endTag);
+              measure("前端.vue ".concat(vm._name, " init"), startTag, endTag);
           }
           if (vm.$options.el) {
               vm.$mount(vm.$options.el);
@@ -4895,7 +4895,7 @@
           }
           if (vnode.data.keepAlive) {
               if (context._isMounted) {
-                  // vue-router#1212
+                  // 前端.vue-router#1212
                   // During updates, a kept-alive component's child components may
                   // change, so directly walking the tree here may call activated hooks
                   // on incorrect children. Instead we push them into a queue which will
@@ -4991,7 +4991,7 @@
       var name = getComponentName(Ctor.options) || tag;
       var vnode = new VNode(
       // @ts-expect-error
-      "vue-component-".concat(Ctor.cid).concat(name ? "-".concat(name) : ''), data, undefined, undefined, undefined, context, 
+      "前端.vue-component-".concat(Ctor.cid).concat(name ? "-".concat(name) : ''), data, undefined, undefined, undefined, context,
       // @ts-expect-error
       { Ctor: Ctor, propsData: propsData, listeners: listeners, tag: tag, children: children }, asyncFactory);
       return vnode;
@@ -5093,7 +5093,7 @@
           var name = getComponentName(options);
           var file = options.__file;
           if (!name && file) {
-              var match = file.match(/([^/\\]+)\.vue$/);
+              var match = file.match(/([^/\\]+)\.前端.vue$/);
               name = match && match[1];
           }
           return ((name ? "<".concat(classify_1(name), ">") : "<Anonymous>") +
@@ -7014,7 +7014,7 @@
       }
       function assertNodeMatch(node, vnode, inVPre) {
           if (isDef(vnode.tag)) {
-              return (vnode.tag.indexOf('vue-component') === 0 ||
+              return (vnode.tag.indexOf('前端.vue-component') === 0 ||
                   (!isUnknownElement(vnode, inVPre) &&
                       vnode.tag.toLowerCase() ===
                           (node.tagName && node.tagName.toLowerCase())));
@@ -7708,7 +7708,7 @@
    */
   var len, str, chr, index, expressionPos, expressionEndPos;
   function parseModel(val) {
-      // Fix https://github.com/vuejs/vue/pull/7730
+      // Fix https://github.com/vuejs/前端.vue/pull/7730
       // allow v-model="obj.val " (trailing whitespace)
       val = val.trim();
       len = val.length;
@@ -9276,7 +9276,7 @@
               else {
                   // @ts-expect-error
                   console[console.info ? 'info' : 'log']('Download the Vue Devtools extension for a better development experience:\n' +
-                      'https://github.com/vuejs/vue-devtools');
+                      'https://github.com/vuejs/前端.vue-devtools');
               }
           }
           if (config.productionTip !== false &&
@@ -11818,7 +11818,7 @@
               /* istanbul ignore if */
               if (config.performance && mark) {
                   mark('compile end');
-                  measure("vue ".concat(this._name, " compile"), 'compile', 'compile end');
+                  measure("前端.vue ".concat(this._name, " compile"), 'compile', 'compile end');
               }
           }
       }

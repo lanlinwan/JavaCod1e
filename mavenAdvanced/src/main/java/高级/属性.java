@@ -5,7 +5,7 @@ public class 属性 {
     // <properties>
     //    //自定义标识符
     //   <spring.version>5.2.20.RELEASE</spring.version>
-    //   <jdbc.url>jdbc:mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>
+    //   <jdbc.url>jdbc:MysqlS.mysql://127.0.0.1:3306/lan?useSSL=false</jdbc.url>
     //  </properties>
 
     //版本管理

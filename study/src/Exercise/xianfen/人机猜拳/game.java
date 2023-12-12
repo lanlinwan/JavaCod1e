@@ -24,34 +24,42 @@ public class game {
 
     //1.游戏
     static public void   play(){
-        System.out.println("---------------欢迎进入游戏世界--------------");
-        System.out.println("猜拳规则:1:石头 2:剪刀 3:布");
-        System.out.println("请选择对战角色:1:刘备 2:孙权 3:曹操");
+        boolean tui=true;
 
-        //输入正确的数字 人机对象才会创建
-        while (rival == null){
-            //获取对战角色
-            int rivalint=s.nextInt();
+            System.out.println("---------------欢迎进入游戏世界--------------");
+            System.out.println("猜拳规则:1:石头 2:剪刀 3:布");
+            System.out.println("请选择对战角色:1:刘备 2:孙权 3:曹操");
+            System.out.println("退出: 0");
 
-            switch (rivalint){
-                case 1:
-                    rival=lb;
-                    //System.out.println(1+rival.getName());
-                    break;
-                case 2:
-                    rival=sq;
-                    break;
-                case 3:
-                    rival=cc;
-                    break;
-                default:
-                    System.out.println("请输入对应的数字");
-                    System.out.println("请选择对战角色:1:刘备 2:孙权 3:曹操");
+            //输入正确的数字 人机对象才会创建
+            while (rival == null) {
+                //获取对战角色
+                int rivalint = s.nextInt();
+                if (rivalint == 0) {
+                    return;
+                }
+
+                switch (rivalint) {
+                    case 1:
+                        rival = lb;
+                        //System.out.println(1+rival.getName());
+                        break;
+                    case 2:
+                        rival = sq;
+                        break;
+                    case 3:
+                        rival = cc;
+                        break;
+                    default:
+                        System.out.println("请输入对应的数字");
+                        System.out.println("请选择对战角色:1:刘备 2:孙权 3:曹操");
+                }
             }
-        }
 
-        //开始
-        begin(rival);
+            //开始
+            begin(rival);
+
+
 
     }
 

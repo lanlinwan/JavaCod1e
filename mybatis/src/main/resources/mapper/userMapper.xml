@@ -19,7 +19,7 @@
                 id,name,age,contact,hobby
          </sql>
 
-        <select id="selectAll" resultType="mybatis.user">
+        <select id="selectAll" resultType="pojo.user">
             select
                 <include refid="user_column"/>
             from user;
@@ -33,7 +33,7 @@
             id:唯-*标识          type:(对象名)映射的类型 支持别名
             column:sql表的列名   property:java实体类的属性名
     -->
-        <resultMap id="userResultMap" type="mybatis.user">
+        <resultMap id="userResultMap" type="pojo.user">
             <id property="id" column="id"/>
             <result  property="name" column="name"/>
         </resultMap>
@@ -44,7 +44,7 @@
 
     <!--   查询所有 resultType: 查询结果 映射java实体类
     -->
-    <select id="selectAll" resultType="mybatis.user">
+    <select id="selectAll" resultType="pojo.user">
         select *
         from user;
     </select>
@@ -64,7 +64,7 @@
           <![CDATA[ < ]]>
     -->
    <!--
-        <select id="selectById" resultType="mybatis.user">
+        <select id="selectById" resultType="pojo.user">
             select *
             from user
             where id = #{id};
@@ -72,7 +72,7 @@
     -->
 
     <!--    条件查询
-        <select id="selectByCondition"  resultType="mybatis.user">
+        <select id="selectByCondition"  resultType="pojo.user">
             select *
             from user
             where id = #{id}
@@ -89,10 +89,10 @@
 
     <!-- <if>根据判断决定是否 将内容填充至 sql语句中 -->
     <!--where:
-    当where标签中有内容时，会自动生成where关键字，并且将内容 前 多余的and或or去掉
+    当where标签中有内容时，会自动生成where关键字，并且将内容前 多余的and或or去掉
     当where.标签中没有内容时，此时where 标签没有任何效果
     注意: where 标签不能将其中 内容后面多余的and或or去掉-->
-    <select id="selectByCondition" resultType="mybatis.user">
+    <select id="selectByCondition" resultType="pojo.user">
         select *
         from user
         <where>
@@ -113,7 +113,7 @@
         prefix/suffix:将trim标签中内容前面或后面添加指定内容
         suffixOverrides|prefixOverrides:将trim标签中内容前面或后面去掉指定内容
         若标签中没有内容时: trim标签也没有任何效果-->
-    <select id="selectTrim" resultType="mybatis.user">
+    <select id="selectTrim" resultType="pojo.user">
         select *
         from user
         <trim prefix="where" suffixOverrides="and||or">
@@ -131,7 +131,7 @@
 
 
     <!-- choose   单条件动态查询-->
-    <select id="selectByConditionSingle" resultType="mybatis.user">
+    <select id="selectByConditionSingle" resultType="pojo.user">
         select *
         from user
         <where>
@@ -157,14 +157,14 @@
          concat('%',#{username},'%')  concat拼接可以
          "%"#{username}"%"   可以
     -->
-    <select id="selectByLike" resultType="mybatis.user">
+    <select id="selectByLike" resultType="pojo.user">
             # select * from lan.user where name like '%#{username}%'
              select * from lan.user where name like concat('%',#{username},'%')
             # select * from lan.user where name like  "%"#{username}"%"
     </select>
 
     <!--动态设置表名 只能使用${}-->
-    <select id="getAllUser" resultType="mybatis.user">
+    <select id="getAllUser" resultType="pojo.user">
         select * from ${tablesuser}
     </select>
 

@@ -1,7 +1,6 @@
 package web.serevlet;
 
-import com.alibaba.fastjson.JSON;
-import pojo.Brand;
+
 import pojo.tbl_login;
 import service.loginServicelmpl;
 
@@ -9,13 +8,12 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet("/login/*")
-public class loginServlet extends BaseServlet{
-    loginServicelmpl  loginServicelmpl=new loginServicelmpl();
+public class loginServlet extends BaseServlet {
+    service.loginServicelmpl loginServicelmpl=new loginServicelmpl();
 
     public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //设置请求发来的字符集，避免乱码
@@ -34,6 +32,9 @@ public class loginServlet extends BaseServlet{
         //判断用户名密码是否正确（这里只做简单讲解）
         if(password.equals(password1)){
             //如果用户名密码正确，则请求转发到登录成功页面
+            //将登陆成功的对象,存储到Session中
+            HttpSession session=request.getSession();
+            session.setAttribute("login",login);
             response.getWriter().write("success");
         }else{
             //否则重定向到登录界面，并提示用户用户名或密码错误

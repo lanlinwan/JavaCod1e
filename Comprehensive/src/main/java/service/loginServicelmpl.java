@@ -8,8 +8,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import pojo.tbl_login;
 import util.SqlSessionUtils;
 
-import java.util.List;
-
 
 public class loginServicelmpl {
     SqlSessionFactory factory = SqlSessionUtils.getSqlSessionFactory();

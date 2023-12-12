@@ -6,6 +6,8 @@
 <!--名称空间-->
 <mapper namespace="mapper.UserMapper">
 
+    <!--缓存设置-->
+    <cache/>
 
     <!--
     数据库表的字段名称和实体 类的属性名称不一-样，则不能自动封装数据
@@ -17,7 +19,7 @@
                 id,name,age,contact,hobby
          </sql>
 
-        <select id="selectAll" resultType="mybatis.user">
+        <select id="selectAll" resultType="pojo.user">
             select
                 <include refid="user_column"/>
             from user;
@@ -31,7 +33,7 @@
             id:唯-*标识          type:(对象名)映射的类型 支持别名
             column:sql表的列名   property:java实体类的属性名
     -->
-        <resultMap id="userResultMap" type="mybatis.user">
+        <resultMap id="userResultMap" type="pojo.user">
             <id property="id" column="id"/>
             <result  property="name" column="name"/>
         </resultMap>
@@ -40,8 +42,9 @@
         </select>
 
 
-    <!--    查询所有-->
-    <select id="selectAll" resultType="mybatis.user">
+    <!--   查询所有 resultType: 查询结果 映射java实体类
+    -->
+    <select id="selectAll" resultType="pojo.user">
         select *
         from user;
     </select>
@@ -61,7 +64,7 @@
           <![CDATA[ < ]]>
     -->
    <!--
-        <select id="selectById" resultType="mybatis.user">
+        <select id="selectById" resultType="pojo.user">
             select *
             from user
             where id = #{id};
@@ -69,7 +72,7 @@
     -->
 
     <!--    条件查询
-        <select id="selectByCondition"  resultType="mybatis.user">
+        <select id="selectByCondition"  resultType="pojo.user">
             select *
             from user
             where id = #{id}
@@ -83,8 +86,13 @@
                  <where></where> 替换 where
     -->
 
-<!--    //where 1=1-->
-    <select id="selectByCondition" resultType="mybatis.user">
+
+    <!-- <if>根据判断决定是否 将内容填充至 sql语句中 -->
+    <!--where:
+    当where标签中有内容时，会自动生成where关键字，并且将内容前 多余的and或or去掉
+    当where.标签中没有内容时，此时where 标签没有任何效果
+    注意: where 标签不能将其中 内容后面多余的and或or去掉-->
+    <select id="selectByCondition" resultType="pojo.user">
         select *
         from user
         <where>
@@ -100,12 +108,30 @@
         </where>
     </select>
 
+    <!--trim:
+        若标签中有内容时:
+        prefix/suffix:将trim标签中内容前面或后面添加指定内容
+        suffixOverrides|prefixOverrides:将trim标签中内容前面或后面去掉指定内容
+        若标签中没有内容时: trim标签也没有任何效果-->
+    <select id="selectTrim" resultType="pojo.user">
+        select *
+        from user
+        <trim prefix="where" suffixOverrides="and||or">
+            <if test="id !=null">
+                id = #{id} and
+            </if>
+            <if test="name !=null and name !='' ">
+                 name like #{name}  and
+            </if>
+            <if test="age !=null">
+                age like #{age}
+            </if>
+        </trim>
+    </select>
 
 
-
-
-    <!--    单条件动态查询-->
-    <select id="selectByConditionSingle" resultType="mybatis.user">
+    <!-- choose   单条件动态查询-->
+    <select id="selectByConditionSingle" resultType="pojo.user">
         select *
         from user
         <where>
@@ -119,9 +145,9 @@
                 <when test="age !=null">
                     and age like #{age}
                 </when>
-                <!--            <otherwise>&lt;!&ndash; 相当于default&ndash;&gt;-->
-                <!--                1=1-->
-                <!--            </otherwise>-->
+                 <otherwise><!-- 相当于default-->
+                 1=1
+                 </otherwise>
             </choose>
         </where>
     </select>
@@ -131,19 +157,19 @@
          concat('%',#{username},'%')  concat拼接可以
          "%"#{username}"%"   可以
     -->
-    <select id="selectByLike" resultType="mybatis.user">
+    <select id="selectByLike" resultType="pojo.user">
             # select * from lan.user where name like '%#{username}%'
              select * from lan.user where name like concat('%',#{username},'%')
             # select * from lan.user where name like  "%"#{username}"%"
     </select>
 
     <!--动态设置表名 只能使用${}-->
-    <select id="getAllUser" resultType="mybatis.user">
+    <select id="getAllUser" resultType="pojo.user">
         select * from ${tablesuser}
     </select>
 
     <!--添加-->
-    <!--主键返回:获取刚刚添加记录 的 自增主键
+    <!--主键返回:获取刚刚添加记录 的 自增主键,他是把获取到的的主键放回传入的对象属性中
         void add(User user);
         useGeneratedKeys:设置当前标签中的sql使用了自增的主键
         keyProperty:将自增的主键的值赋值给传输到映射文件中参数的某个属性
@@ -194,12 +220,23 @@
         mybatis会将数组参数，封装为-个Map集合。
         *默认: array =数组
         *使用@Param注解改变map集合的默认key的名称
+        separator 拼接遍历元素的之间分隔符
+        open     拼接内容前面
+        close    拼接内容后面
     -->
-    <delete id="deleteByIds">
+    <delete id="deleteByIdarr">
         delete from user
         where id
         in
         <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>;
+    </delete>
+    <!--简便写法-->
+    <delete id="deleteByIds">
+        delete from user
+        where id
+        <foreach collection="ids" item="id" separator="or">
             #{id}
         </foreach>;
     </delete>

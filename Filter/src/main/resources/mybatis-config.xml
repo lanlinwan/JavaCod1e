@@ -8,11 +8,11 @@
     -->
     <environments default="development">
         <environment id="development">
-            <transactionManager type="JDBC"/>
+            <transactionManager type="MysqlS.JDBC"/>
             <dataSource type="POOLED">
                 <!--数据库连接信息-->
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://127.0.0.1:3306/lan?useSSL=false&amp;useServerPrepStmts=true"/>
+                <property name="driver" value="com.MysqlS.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:MysqlS.mysql://127.0.0.1:3306/lan?useSSL=false&amp;useServerPrepStmts=true"/>
                 <property name="username" value="root"/>
                 <property name="password" value="admin123"/>
             </dataSource>

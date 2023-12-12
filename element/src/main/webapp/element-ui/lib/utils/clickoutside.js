@@ -45,7 +45,7 @@ function createDocumentHandler(el, binding, vnode) {
  * v-clickoutside
  * @desc 点击元素外面才会触发的事件
  * @example
- * ```vue
+ * ```前端.vue
  * <div v-element-clickoutside="handleClose">
  * ```
  */

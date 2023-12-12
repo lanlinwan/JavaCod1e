@@ -11,15 +11,17 @@
         <module name="maven" />
         <module name="mybatis" />
         <module name="VUE" />
+        <module name="技术栈" />
         <module name="Redis-jedis" />
         <module name="loginJson" />
+        <module name="requestANDreponse" />
         <module name="oracle1" />
         <module name="Filter" />
         <module name="oracle2" />
+        <module name="jspANDservlet" />
         <module name="Redis-Spring" />
-        <module name="tomact-demo1" />
-        <module name="Comprehensive" />
         <module name="Oracle" />
+        <module name="Comprehensive" />
         <module name="ExBrand" />
         <module name="email" />
         <module name="element" />
@@ -32,6 +34,7 @@
       <module name="ExBrand" target="16" />
       <module name="ExLogin" target="1.7" />
       <module name="Filter" target="16" />
+      <module name="jspANDservlet" target="1.7" />
       <module name="loginJson" target="16" />
       <module name="maven" target="1.7" />
       <module name="maven1" target="1.5" />
@@ -42,8 +45,9 @@
       <module name="oracle2" target="16" />
       <module name="Redis-jedis" target="16" />
       <module name="Redis-Spring" target="16" />
-      <module name="tomact-demo1" target="1.7" />
+      <module name="requestANDreponse" target="1.7" />
       <module name="VUE" target="16" />
+      <module name="技术栈" target="16" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

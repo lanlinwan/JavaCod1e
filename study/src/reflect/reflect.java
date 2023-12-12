@@ -17,4 +17,18 @@ public class reflect {
     //    //  Constructor:构造方法  Parameter:参数
     //    //  Field:成员变量        Modifiers:修饰符
     //    //  Method:方法          Declared:私有的
+    public static void main(String[] args) {
+        try {
+            queryList(Student.class);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+    public static <T> void queryList(Class<T> clazz) throws InstantiationException, IllegalAccessException {
+
+        T t= clazz.newInstance();
+        System.out.println(t);
+    }
 }

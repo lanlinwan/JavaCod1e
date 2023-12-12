@@ -34,7 +34,7 @@ public class lockVSsyuchronized {
     //功能层面.
     //1. 二者均属于悲观锁 与 非公平锁、都具备基本的互斥、同步、锁重入功能
     //2. Lock提供了许多synchronized不具备的功能，例如获取等待状态、可公平锁、可打断、可超时、多条件变量
-    //3. Lock有适合不同场景的实现，如ReentrantLock, ReentrantReadWriteLock(写锁)
+    //3. Lock有适合不同场景的实现，如ReentrantLock(是可重入的互斥锁), ReentrantReadWriteLock(写锁)
     //4. lock等待锁过程中可以用interrupt来中断等待，而synchronized只能等待锁的释放，不能响应中断；
     //  5. synchronized在发生异常时候会自动释放占有的锁，因此不会出现死锁；
     //   而lock发生异常时候，不会主动释放占有的锁，必须手动unlock来释放锁，可能引起死锁的发生。

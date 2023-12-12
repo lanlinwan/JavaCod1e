@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -229,7 +229,7 @@ module.exports = require("element-ui/lib/utils/dom");
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/panel/time.vue?vue&type=template&id=3d939089&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/date-picker/src/panel/time.前端.vue?前端.vue&type=template&id=3d939089&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -317,7 +317,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/date-picker/src/panel/time.vue?vue&type=template&id=3d939089&
+// CONCATENATED MODULE: ./packages/date-picker/src/panel/time.前端.vue?前端.vue&type=template&id=3d939089&
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/date-util"
 var date_util_ = __webpack_require__(1);
@@ -326,10 +326,10 @@ var date_util_ = __webpack_require__(1);
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// EXTERNAL MODULE: ./packages/date-picker/src/basic/time-spinner.vue + 4 modules
+// EXTERNAL MODULE: ./packages/date-picker/src/basic/time-spinner.前端.vue + 4 modules
 var time_spinner = __webpack_require__(34);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/panel/time.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/date-picker/src/panel/time.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -521,12 +521,12 @@ var time_spinner = __webpack_require__(34);
     this.$emit('mounted');
   }
 });
-// CONCATENATED MODULE: ./packages/date-picker/src/panel/time.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/date-picker/src/panel/time.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var panel_timevue_type_script_lang_js_ = (timevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/date-picker/src/panel/time.vue
+// CONCATENATED MODULE: ./packages/date-picker/src/panel/time.前端.vue
 
 
 
@@ -547,7 +547,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/date-picker/src/panel/time.vue"
+component.options.__file = "packages/date-picker/src/panel/time.前端.vue"
 /* harmony default export */ var time = __webpack_exports__["a"] = (component.exports);
 
 /***/ }),
@@ -592,7 +592,7 @@ component.options.__file = "packages/date-picker/src/panel/time.vue"
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/picker.vue?vue&type=template&id=79ae069f&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/date-picker/src/picker.前端.vue?前端.vue&type=template&id=79ae069f&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -770,9 +770,9 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/date-picker/src/picker.vue?vue&type=template&id=79ae069f&
+// CONCATENATED MODULE: ./packages/date-picker/src/picker.前端.vue?前端.vue&type=template&id=79ae069f&
 
-// EXTERNAL MODULE: external "vue"
+// EXTERNAL MODULE: external "前端.vue"
 var external_vue_ = __webpack_require__(7);
 var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 
@@ -783,7 +783,7 @@ var clickoutside_default = /*#__PURE__*/__webpack_require__.n(clickoutside_);
 // EXTERNAL MODULE: external "element-ui/lib/utils/date-util"
 var date_util_ = __webpack_require__(1);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/vue-popper"
+// EXTERNAL MODULE: external "element-ui/lib/utils/前端.vue-popper"
 var vue_popper_ = __webpack_require__(5);
 var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
 
@@ -799,7 +799,7 @@ var input_default = /*#__PURE__*/__webpack_require__.n(input_);
 var merge_ = __webpack_require__(9);
 var merge_default = /*#__PURE__*/__webpack_require__.n(merge_);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/picker.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/date-picker/src/picker.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -1374,7 +1374,7 @@ var validator = function validator(val) {
   },
 
   created: function created() {
-    // vue-popper
+    // 前端.vue-popper
     this.popperOptions = {
       boundariesPadding: 0,
       gpuAcceleration: false
@@ -1723,12 +1723,12 @@ var validator = function validator(val) {
     }
   }
 });
-// CONCATENATED MODULE: ./packages/date-picker/src/picker.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/date-picker/src/picker.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_pickervue_type_script_lang_js_ = (pickervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/date-picker/src/picker.vue
+// CONCATENATED MODULE: ./packages/date-picker/src/picker.前端.vue
 
 
 
@@ -1749,7 +1749,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/date-picker/src/picker.vue"
+component.options.__file = "packages/date-picker/src/picker.前端.vue"
 /* harmony default export */ var picker = __webpack_exports__["a"] = (component.exports);
 
 /***/ }),
@@ -1759,7 +1759,7 @@ component.options.__file = "packages/date-picker/src/picker.vue"
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/basic/time-spinner.vue?vue&type=template&id=1facadeb&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/date-picker/src/basic/time-spinner.前端.vue?前端.vue&type=template&id=1facadeb&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -2114,7 +2114,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/date-picker/src/basic/time-spinner.vue?vue&type=template&id=1facadeb&
+// CONCATENATED MODULE: ./packages/date-picker/src/basic/time-spinner.前端.vue?前端.vue&type=template&id=1facadeb&
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/date-util"
 var date_util_ = __webpack_require__(1);
@@ -2126,7 +2126,7 @@ var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 // EXTERNAL MODULE: ./src/directives/repeat-click.js
 var repeat_click = __webpack_require__(30);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/basic/time-spinner.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/date-picker/src/basic/time-spinner.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -2424,12 +2424,12 @@ var repeat_click = __webpack_require__(30);
     }
   }
 });
-// CONCATENATED MODULE: ./packages/date-picker/src/basic/time-spinner.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/date-picker/src/basic/time-spinner.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var basic_time_spinnervue_type_script_lang_js_ = (time_spinnervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/date-picker/src/basic/time-spinner.vue
+// CONCATENATED MODULE: ./packages/date-picker/src/basic/time-spinner.前端.vue
 
 
 
@@ -2450,7 +2450,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/date-picker/src/basic/time-spinner.vue"
+component.options.__file = "packages/date-picker/src/basic/time-spinner.前端.vue"
 /* harmony default export */ var time_spinner = __webpack_exports__["a"] = (component.exports);
 
 /***/ }),
@@ -2489,13 +2489,13 @@ module.exports = require("vue");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: ./packages/date-picker/src/picker.vue + 4 modules
+// EXTERNAL MODULE: ./packages/date-picker/src/picker.前端.vue + 4 modules
 var picker = __webpack_require__(32);
 
-// EXTERNAL MODULE: ./packages/date-picker/src/panel/time.vue + 4 modules
+// EXTERNAL MODULE: ./packages/date-picker/src/panel/time.前端.vue + 4 modules
 var time = __webpack_require__(27);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/panel/time-range.vue?vue&type=template&id=fb28660e&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/date-picker/src/panel/time-range.前端.vue?前端.vue&type=template&id=fb28660e&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -2629,7 +2629,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/date-picker/src/panel/time-range.vue?vue&type=template&id=fb28660e&
+// CONCATENATED MODULE: ./packages/date-picker/src/panel/time-range.前端.vue?前端.vue&type=template&id=fb28660e&
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/date-util"
 var date_util_ = __webpack_require__(1);
@@ -2638,10 +2638,10 @@ var date_util_ = __webpack_require__(1);
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// EXTERNAL MODULE: ./packages/date-picker/src/basic/time-spinner.vue + 4 modules
+// EXTERNAL MODULE: ./packages/date-picker/src/basic/time-spinner.前端.vue + 4 modules
 var time_spinner = __webpack_require__(34);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/date-picker/src/panel/time-range.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/date-picker/src/panel/time-range.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -2873,12 +2873,12 @@ var advanceTime = function advanceTime(date, amount) {
     }
   }
 });
-// CONCATENATED MODULE: ./packages/date-picker/src/panel/time-range.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/date-picker/src/panel/time-range.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var panel_time_rangevue_type_script_lang_js_ = (time_rangevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/date-picker/src/panel/time-range.vue
+// CONCATENATED MODULE: ./packages/date-picker/src/panel/time-range.前端.vue
 
 
 
@@ -2899,7 +2899,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/date-picker/src/panel/time-range.vue"
+component.options.__file = "packages/date-picker/src/panel/time-range.前端.vue"
 /* harmony default export */ var time_range = (component.exports);
 // CONCATENATED MODULE: ./packages/date-picker/src/picker/time-picker.js
 

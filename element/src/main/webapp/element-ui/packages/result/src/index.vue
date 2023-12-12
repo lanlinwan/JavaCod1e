@@ -21,10 +21,10 @@
   </div>
 </template>
 <script>
-import IconSuccess from './icon-success.vue';
-import IconError from './icon-error.vue';
-import IconWarning from './icon-warning.vue';
-import IconInfo from './icon-info.vue';
+import IconSuccess from './icon-success.前端.vue';
+import IconError from './icon-error.前端.vue';
+import IconWarning from './icon-warning.前端.vue';
+import IconInfo from './icon-info.前端.vue';
 
 const IconMap = {
   success: 'icon-success',

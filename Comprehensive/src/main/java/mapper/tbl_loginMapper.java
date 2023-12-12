@@ -4,8 +4,6 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import pojo.tbl_login;
 
-import java.util.List;
-
 public interface tbl_loginMapper {
 
     @Select("select password  from tbl_login where email=#{email} ")

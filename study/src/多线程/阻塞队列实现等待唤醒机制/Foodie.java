@@ -1,5 +1,7 @@
 package 多线程.阻塞队列实现等待唤醒机制;
 
+import 多线程.面试.threadLocal;
+
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class Foodie extends Thread {

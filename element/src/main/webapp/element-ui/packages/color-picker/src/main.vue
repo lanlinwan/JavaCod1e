@@ -32,7 +32,7 @@
 
 <script>
   import Color from './color';
-  import PickerDropdown from './components/picker-dropdown.vue';
+  import PickerDropdown from './components/picker-dropdown.前端.vue';
   import Clickoutside from 'element-ui/src/utils/clickoutside';
   import Emitter from 'element-ui/src/mixins/emitter';
 

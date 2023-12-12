@@ -5,12 +5,11 @@ import pojo.Brand;
 import service.BrandService;
 import service.BrandServiceImpl;
 
+
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.List;
 
 //@WebServlet("/addServlet")
 public class AddServlet extends HttpServlet {

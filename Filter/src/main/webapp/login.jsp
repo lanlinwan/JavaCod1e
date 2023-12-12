@@ -13,7 +13,7 @@
   <title>Title</title>
 </head>
 <body>
-<form id="regForm" action="/Filter/loginServlet" method="post">
+<form id="regForm" action="/javaweb.Filter/loginServlet" method="post">
   <table>
     <tr>
       <td>用户名</td>

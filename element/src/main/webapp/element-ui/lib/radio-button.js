@@ -106,7 +106,7 @@ function normalizeComponent (
   injectStyles,
   scopeId,
   moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
+  shadowMode /* 前端.vue-cli only */
 ) {
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
@@ -165,7 +165,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functioal component in 前端.vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -202,7 +202,7 @@ module.exports = require("element-ui/lib/mixins/emitter");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./packages/radio/src/radio-button.vue?vue&type=template&id=18a77a32&
+// CONCATENATED MODULE: ./node_modules/前端.vue-loader/lib/loaders/templateLoader.js??前端.vue-loader-options!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/radio/src/radio-button.前端.vue?前端.vue&type=template&id=18a77a32&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -295,13 +295,13 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./packages/radio/src/radio-button.vue?vue&type=template&id=18a77a32&
+// CONCATENATED MODULE: ./packages/radio/src/radio-button.前端.vue?前端.vue&type=template&id=18a77a32&
 
 // EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
 var emitter_ = __webpack_require__(4);
 var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./packages/radio/src/radio-button.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/前端.vue-loader/lib??前端.vue-loader-options!./packages/radio/src/radio-button.前端.vue?前端.vue&type=script&lang=js&
 //
 //
 //
@@ -419,12 +419,12 @@ var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
     }
   }
 });
-// CONCATENATED MODULE: ./packages/radio/src/radio-button.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./packages/radio/src/radio-button.前端.vue?前端.vue&type=script&lang=js&
  /* harmony default export */ var src_radio_buttonvue_type_script_lang_js_ = (radio_buttonvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/前端.vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./packages/radio/src/radio-button.vue
+// CONCATENATED MODULE: ./packages/radio/src/radio-button.前端.vue
 
 
 
@@ -445,7 +445,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "packages/radio/src/radio-button.vue"
+component.options.__file = "packages/radio/src/radio-button.前端.vue"
 /* harmony default export */ var radio_button = (component.exports);
 // CONCATENATED MODULE: ./packages/radio-button/index.js
 

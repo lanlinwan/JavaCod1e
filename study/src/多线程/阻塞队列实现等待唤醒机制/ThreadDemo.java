@@ -15,7 +15,8 @@ public class ThreadDemo {
 
         //1.创建阻塞队列的对象
         ArrayBlockingQueue<String> queue = new ArrayBlockingQueue<>(1);
-
+        ThreadLocal<Integer> threadLocal=new ThreadLocal<>();
+        threadLocal.set(10);
 
         //2.创建线程的对象，并把阻塞队列传递过去
         Cook c = new Cook(queue);
@@ -24,6 +25,8 @@ public class ThreadDemo {
         //3.开启线程
         c.start();
         f.start();
+
+        System.out.println("--------------------------------------");
 
     }
 }

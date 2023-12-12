@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--设置全局配置-->
+    <settings>
+        <!--将_自动映射为驼峰  tbl_book:tblBook-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+    </settings>
+
+    <environments default="development">
+        <environment id="development">
+
+            <!--
+            transactionManager:设置事务管理方式
+            属性:
+             type= "JDBC || MANAGED”
+                    JDBC:表示当前环境中，执行SQL时,使用的是JDBC中原生的事务管理方式，事务的提交或回滚需要手动处理
+                    MANAGED:被管理，例Spring
+            -->
+            <transactionManager type="JDBC"/>
+
+            <!--
+                dataSource:配置数据源
+                属性:
+                type:设置数据源的类型
+                type= "POOL ED/UNPOOLED/JNDI”
+                POOLED:表示使用数据库连接池缓存数据库连接
+                UNPOOLED:表示不使用数据库连接池
+                JNDI:表示使用上下文中的数据源T
+            -->
+            <dataSource type="POOLED">
+                <!--数据库连接信息-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.182.130:3306/hmall?useSSL=false&amp;severTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!--    加载sql映射文件-->
+        <!-- <mapper resource="mapper/userMapper.xml"/>-->
+
+        <!-- 以包为单位 mapper代理方式-->
+        <package name="mapper"/>
+    </mappers>
+
+</configuration>

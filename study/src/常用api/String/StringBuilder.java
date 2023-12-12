@@ -1,5 +1,10 @@
 package 常用api.String;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class StringBuilder {
     public static void main(String[] args) {
         //StringBuilder 可以看成一个容器,创建以后里面的内容是可变的
@@ -25,6 +30,16 @@ public class StringBuilder {
         //5.delete(int,int)根据索引范围删除字符,包头不包尾
         //6.insert(int,object)插入索引处
         //7.replace(int,int,String)索引范围替换
+
+        ///8. 集合转 转字符串
+        List<Integer> list=new ArrayList();
+        Collections.addAll(list,1,2,3,4,5,6,7,8);
+        StringBuffer ssb = new StringBuffer();
+        list.stream().forEach(str -> {
+            ssb.append(str).append(",");
+        });
+        //删除索引处的值
+        sb.deleteCharAt(sb.length()-1);
 
 
         //练习:将数组转换为 字符串

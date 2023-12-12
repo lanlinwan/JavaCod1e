@@ -26,4 +26,5 @@ public class SpringDataReids {
     redisTemplate                                  通用的命令
 
      */
+
 }

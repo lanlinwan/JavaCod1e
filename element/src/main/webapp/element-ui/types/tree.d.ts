@@ -133,7 +133,7 @@ export declare class ElTree<K, D extends TreeData> extends ElementUIComponent {
   allowDrop: (draggingNode: TreeNode<K, D>, dropNode: TreeNode<K, D>, type: 'prev' | 'inner' | 'next') => boolean;
 
   /**
-   * Filter all tree nodes. Filtered nodes will be hidden
+   * javaweb.Filter all tree nodes. Filtered nodes will be hidden
    *
    * @param value The value to be used as first parameter for `filter-node-method`
    */

@@ -29,7 +29,7 @@ export interface RenderHeaderData {
   $index: number
 }
 
-/** Filter Object */
+/** javaweb.Filter Object */
 export interface TableColumnFilter {
   /** The text to show in the filter's panel */
   text: string,
@@ -112,6 +112,6 @@ export declare class ElTableColumn extends ElementUIComponent {
   /** Data filtering method. If `filter-multiple` is on, this method will be called multiple times for each row, and a row will display if one of the calls returns `true` */
   filterMethod: (value: any, row: object) => boolean
 
-  /** Filter value for selected data, might be useful when table header is rendered with `render-header` */
+  /** javaweb.Filter value for selected data, might be useful when table header is rendered with `render-header` */
   filteredValue: TableColumnFilter[]
 }
