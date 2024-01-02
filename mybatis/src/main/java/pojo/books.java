@@ -5,7 +5,6 @@ public class books {
     String type;
     String name;
     String description;
-    book bok;
 
     public String getType() {
         return type;
@@ -18,7 +17,7 @@ public class books {
                 ", type='" + type + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", book=" + bok +
+
                 '}';
     }
 
@@ -36,13 +35,6 @@ public class books {
 
 
 
-    public book getBook() {
-        return bok;
-    }
-
-    public void setBook(book book) {
-        this.bok = book;
-    }
 
     public int getId() {
         return id;

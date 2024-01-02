@@ -1,0 +1,41 @@
+#添加库
+PUT /heima
+{
+  "mappings": {
+    "properties": {
+      "info":{
+        "type": "text",
+        "analyzer": "ik_smart"
+      },
+      "email":{
+        "type": "keyword",
+        "index": false
+      },
+      "name": {
+        "type": "object",
+        "properties": {
+          "firestName":{
+            "type": "keyword"
+          },
+          "listName":{
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
+
+#查询库
+GET /heima
+#修改索引库,添加新字段
+PUT /heima/_mapping
+{
+  "properties":{
+    "age":{
+      "type": "long"
+    }
+  }
+}
+#删除
+DELETE /heima

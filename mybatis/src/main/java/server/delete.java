@@ -28,10 +28,10 @@ public class delete {
         int id=5;
 
         //删除
-         userMapper.deleteById(id);
+        // userMapper.deleteById(id);
         //批量删除
         int[] ids={4,6};
-       // userMapper.deleteByIds(ids);
+        userMapper.deleteByIds(ids);
 
 
         //提交事务

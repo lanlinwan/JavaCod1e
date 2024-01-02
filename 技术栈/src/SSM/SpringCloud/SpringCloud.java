@@ -16,6 +16,12 @@ public class SpringCloud {
     ●纵向拆分: 按照业务模块来拆分
     ●横向拆分: 抽取公共服务,提高复用性
 
+    springCloud 5大组件:
+        注册中心: eureka / Nacos
+        网关: Gateway
+        远程调用: feign
+        负载均衡: Ribbon
+        服务熔断: hystrix /sentinel
 
      */
 }

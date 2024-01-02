@@ -26,7 +26,7 @@ public class main {
         SqlSession sqlSession=sqLSessionFactory.openSession();
 
         //3.执行sql
-        //List<user> users=sqlSession.selectList("test.selectAll");
+        //List<user> users=sqlSession.selectList("mapper.UserMapper.selectAll");
         //3.1 获取mapper 接口代理对象
         UserMapper userMapper=sqlSession.getMapper(UserMapper.class);
 
@@ -57,7 +57,7 @@ public class main {
         //List<user> userCon=userMapper.selectByCondition(user1);
 
         //map
-        Map map=new HashMap();
+        Map<String,Object> map=new HashMap();
         map.put("id",id);
         map.put("name",name);
         //map.put("age",age);

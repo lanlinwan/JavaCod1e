@@ -25,9 +25,11 @@ public class 分页插件 {
 
         /*
             limit index, pageSize
+
              index:当前页的起始索引
-             pageSize:每页显示的条数
              pageNum:当前页的页码
+             pageSize:每页显示的条数
+
               index=(pageNum-1) *pageSize
 
             使用MyBatis的分页插件实现分页功能:
@@ -38,9 +40,9 @@ public class 分页插件 {
             list表示分页数据.
             5表示当前导航分页的数量
          */
-        PageHelper.startPage(6,4);
-        List<books> list=booksMapper.selectPage(null);
-        PageInfo<books> page=new PageInfo<>(list,5);
-        System.out.println(page);
+//        PageHelper.startPage(6,4);
+//        List<books> list=booksMapper.selectPage();
+//        PageInfo<books> page=new PageInfo<>(list,5);
+//        System.out.println(page);
     }
 }

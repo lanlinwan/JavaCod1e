@@ -8,22 +8,23 @@
 
 
 
-    <resultMap id="tbl_books" type="books">
-<!--        <association property="book" javaType="book">-->
-<!--            <id property="id" column="id"/>-->
-<!--            <result property="name" column="name" />-->
-<!--        </association>-->
-    </resultMap>
+<!--    <resultMap id="tbl_books" type="books">-->
+<!--&lt;!&ndash;        <association property="book" javaType="book">&ndash;&gt;-->
+<!--&lt;!&ndash;            <id property="id" column="id"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <result property="name" column="name" />&ndash;&gt;-->
+<!--&lt;!&ndash;        </association>&ndash;&gt;-->
+<!--    </resultMap>-->
 
-    <select id="select" resultMap="tbl_books">
-        select * from tbl_books
-            left join tbl_book
-            on tbl_book.id=tbl_books.id
-        where tbl_books.id=#{id}
-    </select>
+<!--    <select id="select" resultMap="tbl_books">-->
+<!--        select * from tbl_books-->
+<!--            left join tbl_book-->
+<!--            on tbl_book.id=tbl_books.id-->
+<!--        where tbl_books.id=#{id}-->
+<!--    </select>-->
 
-<!--    集合查询-->
-    <select id="selectPage" resultType="pojo.books">
-        select * from tbl_books
-    </select>
+<!--&lt;!&ndash;    集合查询&ndash;&gt;-->
+<!--    <select id="selectPage" resultType="pojo.books">-->
+<!--        select * from tbl_books-->
+<!--    </select>-->
+
 </mapper>

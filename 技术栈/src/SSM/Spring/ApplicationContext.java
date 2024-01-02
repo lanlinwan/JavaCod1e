@@ -19,6 +19,4 @@ public class ApplicationContext {
     // 4.Bean初始化时机不同，原始BeanFactory是在首次调用getBean时才进行Bean的创建，而ApplicationContext则是配置文件时加载，
     //   容器一创建就将Bean都实例化并初始化好。
 
-
-    //
 }

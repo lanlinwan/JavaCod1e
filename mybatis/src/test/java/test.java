@@ -3,6 +3,8 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -10,20 +12,29 @@ import java.io.InputStream;
 
 public class test {
     UserMapper userMapper;
-    {
+    InputStream inputStream = null;
+    SqlSession sqlSession;
+
+   {
         String resource = "mybatis-config.xml";
-        InputStream inputStream = null;
         try {
             inputStream = Resources.getResourceAsStream(resource);
         } catch (IOException e) {
             e.printStackTrace();
         }
         SqlSessionFactory sqLSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        SqlSession sqlSession=sqLSessionFactory.openSession();
+         sqlSession=sqLSessionFactory.openSession();
         userMapper=sqlSession.getMapper(UserMapper.class);
     }
+
     @Test
     public void a(){
-        userMapper.selectByLike("lan");
+        System.out.println(userMapper.selectByLike("lan"));
+    }
+
+    @After
+    public void c() throws IOException {
+        inputStream.close();
+        sqlSession.close();
     }
 }

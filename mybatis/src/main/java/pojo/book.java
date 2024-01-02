@@ -1,6 +1,9 @@
 package pojo;
 
-public class book {
+
+import java.io.Serializable;
+
+public class book implements Serializable {
     int id;
     String type;
     String name;

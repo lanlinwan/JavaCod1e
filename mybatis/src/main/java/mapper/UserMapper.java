@@ -1,4 +1,5 @@
 package mapper;
+import org.apache.ibatis.annotations.Mapper;
 import pojo.user;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -6,6 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 import java.util.Map;
 
+@Mapper
 public interface UserMapper {
     //查询所有
     List<user>  selectAll();
@@ -21,17 +23,28 @@ public interface UserMapper {
     List<user> selectByCondition(user user);
     List<user> selectByCondition(Map map);
 
+    //一对多
+    user SelectBook(int i);
+
+    //一对一
+    user SelectBookOne(int i);
+
+
     //单条件动态查询
     List<user> selectByConditionSingle(user user);
 
     //动态设置表名
     List<user> getAllUser(@Param("tablesuser") String tables);
 
+
     //模糊查询
     List<user> selectByLike(@Param("username")String user);
 
     //添加 主键返回
     void add(user user);
+
+    //批量添加
+    void addList(List<user> Listaa);
 
     //修改
     int update(user user);
@@ -40,10 +53,15 @@ public interface UserMapper {
     void deleteById(int id);
 
     //批量删除
+    // <foreach collection="array"> 默认
+    //void deleteByIds(int[] idarr);
     void deleteByIds(@Param("ids")int[] idarr);
 
     //批量删除 传string
     void deleteByIdstr(@Param("ids")String ids);
+
+
+
 
     //分页
     /*

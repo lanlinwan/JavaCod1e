@@ -13,6 +13,10 @@ public class main {
       System.out.println(s2);
       System.out.println(s1==s2);//true
 
+      枚举实现 mu=枚举实现.getInstance();
+      枚举实现 mu1=枚举实现.getInstance();
+      System.out.println(mu==mu1);
+
       // 反射破坏单例
       // reflection(SingleInstance.class);
 

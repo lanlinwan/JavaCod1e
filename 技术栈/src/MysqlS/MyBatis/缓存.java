@@ -11,7 +11,7 @@ public class 缓存 {
           3)同一个SqISession两次查询期间执行了任何一次增删改操作
           4)同一个SqISession两次查询期间手动清空了缓存
       2、MyBatis的 二级缓存
-          二级缓存是SqISessionFactory级别，通过同一个SqlSessionFactory创建的SqlSession查询的结果会被缓存;此后
+          二级缓存是mapper namespace级别，通过同一个 namespace创建的SqlSession查询的结果会被缓存;此后
           若再次执行相同的查询语句，结果就会从缓存中获取
      二级缓存开启的条件:
           a>在核心配置文件中，设置全局配置属性cacheEnabled="true",默认为true,不需要设置

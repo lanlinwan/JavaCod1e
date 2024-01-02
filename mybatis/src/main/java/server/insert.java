@@ -9,6 +9,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class insert {
     public static void main(String[] args) throws IOException {
@@ -38,8 +40,14 @@ public class insert {
         user1.setContact(contact);
         user1.setHobby(hobby);
 
+        List<user> list=new ArrayList<>();
+        list.add(user1);
+        list.add(new user("BEN",16,"199180877","play"));
+
+
         //添加
-        userMapper.add(user1);
+        //userMapper.add(user1);
+        userMapper.addList(list);
         //主键返回
         Integer id=user1.getId();
         System.out.println(id);

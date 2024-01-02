@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface booksMapper {
 
-    List<books> selectPage(Object o);
+//    List<books> selectPage( );
 }

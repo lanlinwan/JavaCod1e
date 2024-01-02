@@ -18,13 +18,28 @@ public class main {
     //   HandlerAdapter, HandlerExceptionResolver.ViewResolver等
     //4.容器初始化后，会将上一步初始化好的重要组件,赋值给DispatcherServlet的成员变量，留待后用
 
-
     //前端控制器（DispatcherServlet）：主要负责捕获来自客户端的请求和调度各个组件。
     //处理器映射器（HandlerMapping）：根据url查找后端控制器Handler(controller),并返回一个执行链
     //处理器适配器（HandlerAdapter）：执行后端控制器（Handler），拿到后端控制器返回的结果ModelAndView后将结果返回给前端控制器DispatcherServlet。
     //后端控制器（处理器）（Handler）：主要负责处理前端请求，完成业务逻辑，生成ModelAndView对象返回给HandlerAdapter。
     //视图解析器（ViewResolver）：主要负责将从DispatcherServlet中拿到的ModelAndView对象进行解析，生成View对象返回给DispatcherServlet。
     //视图View
+
+    //spring执行流程
+    //1. 户通过浏览器发起HttpRequest求到前端控制器(DispatcherServlet)。
+    //2. DispatcherServlet将用户请求发送给处理器映射器(HandlerMapping)。
+    //3. 处理器映射器(HandlerMapping)会根据请求,找到负责处理该请求的处理器,并将其封装为处理器执行链返迥
+    //   (HandlerExecutionChain)给DispatcherServlet
+    //4. DispatcherServlet会根据处理器执行链中的处理器,找到能够执行该处理器的处理器适配器(HandlerAdaptor)
+    //  -注,处理器适配器有多个
+    //5.处理器适配器(HandlerAdapter)会调用对应的具体的Controller
+    //6. Controller将处理结果及要跳转的视图封装到一个对象ModelAndView中并将其返回给处理器适配器(HandlerAdaptor)
+    //7. HandlerAdaptor直接将ModelAndView交给DispatcherServlet，到到,业务处理完毕
+    //8. 务处理完毕后,我们需要将处理结果展示给用户。于是DispatcherServlet 调用ViewResolver,
+    //   将ModelAndView中的视图名称封装为视图对象
+    //9. ViewResolver将封装好的视图(View) 对象返回给DispatcherServlet
+    //10.DispatcherServlet调用视图对象,让其自己(View)进行渲染(将模型数据填充至视图中) , 形成响应对象(HttpResponse)
+    //11.前端控制器(DispatcherServlet)响应(HtpResponse)给浏览器，展示在页面上。
 
     //SpringMVC处理请求的流程是什么?
     //1. 在启动Tomcat过程中，会创建DispatcherServlet对象， 并执行它的初始化逻辑

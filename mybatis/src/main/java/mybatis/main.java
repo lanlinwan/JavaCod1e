@@ -23,7 +23,7 @@ public class main {
         SqlSession sqlSession=sqLSessionFactory.openSession();
 
         //3.执行sql
-         List<user> users=sqlSession.selectList("test.selectAll");
+         List<user> users=sqlSession.selectList("mapper.UserMapper.selectAll");
 
         System.out.println(users);
 

@@ -12,7 +12,7 @@ public class bean生命周期 {
     // Session - 每一次 javaweb.HTTP 请求都会产生一个新的 bean，同时该 bean 仅在当前 javaweb.HTTP session 内有效。
     // Global-session 类似于标准的 javaweb.HTTP Session 作用域，不过它仅仅在基于portlet 的 web 应用中才有意义。
 
-    //SSM.Spring Bean 的生命周期：
+    //Spring Bean 的生命周期：
     //首先是实例化、属性赋值(为bean设置相关属性和依赖)、初始化、销毁这 4 个大阶段；
     //再是初始化的具体操作，有 Aware 接口的依赖注入、BeanPostProcessor 在初始化前后的处理以及 InitializingBean 和 配置文件中init-method 的初始化操作；
     //销毁的具体操作，有注册相关销毁回调接口，最后通过DisposableBean 和 destory-method 进行销毁。
@@ -50,7 +50,7 @@ public class bean生命周期 {
     //            调用afterPropertiesSet方法 和 反射调用init-method指定的方法
     //           bean实现了InitializingBean接口，并且同时在配置文件中指定了init-method，
     //           系统则是先调用afterPropertiesSet方法，然后在调用init-method中指定的方法。
-    //      初始化后:BeanPostProcessor后置处理
+    //      初始化后:BeanPostProcessor接口后置处理
     //  销毁:
     //      使用前 注册销毁的相关调用接口
     //      使用后 DisposableBean 和 destroy-method 进行销毁

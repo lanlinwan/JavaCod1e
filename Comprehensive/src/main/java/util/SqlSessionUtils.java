@@ -13,7 +13,7 @@ public class SqlSessionUtils {
     static {
 
         try {
-            String resource = "mapper/Comprehensive/src/main/resources/mybatis-config.xml";
+            String resource = "mybatis-config.xml";
             InputStream inputStream = Resources.getResourceAsStream(resource);
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         } catch (IOException e) {

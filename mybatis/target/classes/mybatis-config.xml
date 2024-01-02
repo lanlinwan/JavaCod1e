@@ -38,13 +38,12 @@
             <!--
             transact ionManager:设置事务管理方式
             属性:
-             type= "MysqlS.JDBC /MANAGED”
-               MysqlS.JDBC:表示当前环境中，执行SQL时,使用的是JDBC中原生的事务管理方式，
-                    事务的提交或回滚需要手动处理
+             type= "JDBC /MANAGED”
+               JDBC:表示当前环境中，执行SQL时,使用的是JDBC中原生的事务管理方式，事务的提交或回滚需要手动处理
+
                MANAGED:被管理，例Spring
             -->
-            <transactionManager type="MANAGED"/>
-
+            <transactionManager type="JDBC"/>
             <!--
                 dataSource:配置数据源
                 属性:

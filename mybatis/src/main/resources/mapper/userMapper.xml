@@ -31,7 +31,7 @@
 -->
     <!--
             id:唯-*标识          type:(对象名)映射的类型 支持别名
-            column:sql表的列名   property:java实体类的属性名
+            property:java实体类的属性名  column:sql表的列名
     -->
         <resultMap id="userResultMap" type="pojo.user">
             <id property="id" column="id"/>
@@ -40,6 +40,44 @@
         <select id="SelectAllMap" resultMap="userResultMap">
             select *  from user;
         </select>
+
+    <!--一对多 映射-->
+    <resultMap id="userMap" type="pojo.user">
+        <id property="id" column="id"/>
+        <result  property="name" column="name"/>
+        <!--一对多映射 fetchType:懒加载-->
+        <collection property="list" ofType="pojo.book" fetchType="lazy">
+            <id property="id" column="tbid"/>
+            <result  property="name" column="tbname"/>
+            <result  property="type" column="type"/>
+            <result  property="description" column="description"/>
+            <result  property="deleted" column="deleted"/>
+        </collection>
+    </resultMap>
+    <select id="SelectBook" resultMap="userMap">
+        select user.* ,tb.id tbid,tb.name tbname,tb.type,tb.description
+        from user
+        join tbl_book tb on user.id = tb.id where user.id=#{id}
+    </select>
+
+    <!--一对一 映射-->
+    <resultMap id="userOne" type="pojo.user">
+        <id property="id" column="id"/>
+        <result  property="name" column="name"/>
+
+        <association property="book" javaType="pojo.book">
+            <id property="id" column="tbid"/>
+            <result  property="name" column="tbname"/>
+            <result  property="type" column="type"/>
+            <result  property="description" column="description"/>
+            <result  property="deleted" column="deleted"/>
+        </association>
+    </resultMap>
+    <select id="SelectBookOne" resultMap="userOne">
+        select user.* ,tb.id tbid,tb.name tbname,tb.type,tb.description
+        from user
+                 join tbl_book tb on user.id = tb.id where user.id=#{id}
+    </select>
 
 
     <!--   查询所有 resultType: 查询结果 映射java实体类
@@ -117,6 +155,7 @@
         select *
         from user
         <trim prefix="where" suffixOverrides="and||or">
+
             <if test="id !=null">
                 id = #{id} and
             </if>
@@ -131,7 +170,7 @@
 
 
     <!-- choose   单条件动态查询-->
-    <select id="selectByConditionSingle" resultType="pojo.user">
+    <select id="selectByConditionSingle"  resultType="pojo.user">
         select *
         from user
         <where>
@@ -157,10 +196,13 @@
          concat('%',#{username},'%')  concat拼接可以
          "%"#{username}"%"   可以
     -->
+    <!--
+     select * from lan.user where name like '%#{username}%'
+     select * from lan.user where name like  "%"#{username}"%"
+     -->
+
     <select id="selectByLike" resultType="pojo.user">
-            # select * from lan.user where name like '%#{username}%'
-             select * from lan.user where name like concat('%',#{username},'%')
-            # select * from lan.user where name like  "%"#{username}"%"
+             select * from user where name like concat('%',#{username},'%')
     </select>
 
     <!--动态设置表名 只能使用${}-->
@@ -176,6 +218,14 @@
     -->
     <insert id="add" useGeneratedKeys="true" keyProperty="id">
         insert into user values (null,#{name}, #{age}, #{contact}, #{hobby});
+    </insert>
+
+    <insert id="addList" >
+        insert into user values
+        <foreach collection="list" item="user" separator="," >
+             (null,#{user.name}, #{user.age}, #{user.contact}, #{user.hobby})
+        </foreach>
+
     </insert>
 
     <!--修改 -->
@@ -202,10 +252,10 @@
                 contact= #{contact},
             </if>
             <if test="hobby !=null and hobby !=''">
-                hobby= #{hobby}
+                hobby= #{hobby},
             </if>
         </set>
-        where id=#{id};
+        where id=#{id}
     </update>
 
     <!--    删除-->
@@ -235,10 +285,10 @@
     <!--简便写法-->
     <delete id="deleteByIds">
         delete from user
-        where id
-        <foreach collection="ids" item="id" separator="or">
+        where id in
+        <foreach collection="ids" item="id" separator=","  open="(" close=")">
             #{id}
-        </foreach>;
+        </foreach>
     </delete>
 
     <!--

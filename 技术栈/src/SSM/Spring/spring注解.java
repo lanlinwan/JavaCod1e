@@ -18,10 +18,10 @@ public class spring注解 {
     //    @PostConstruct 生命周期:初始化前置
     //    @PreDestroy    生命周期:销毁前置
     //依赖注入:
-    //    @Autowired  按照Type 注入
-    //    @Qualifier  可根据name注入,更细粒度的控制
+    //    @Autowired  按照Type 注入,再按name 注入
+    //    @Qualifier("")  与@Autowired配合使用,可根据name注入,更细粒度的控制
     //    @Value(${配置文件key})      值注入
-    //    @Resource   java自带的注解,按照name和Type 注入
+    //    @Resource   java自带的注解,按照name和Type 注入,可指定
     //    @Primary    解决多个同类型bean,加在类上,优先被加载成bean
     //test:
     //    @RunWith(SpringJUnit4ClassRunner.class)     指定测试
@@ -35,7 +35,7 @@ public class spring注解 {
     //    @EnableAspectJAutoProxy   启用AOP自动代理
 
 
-    //SSM.Spring MVC:
+    //Spring MVC:
     //    @RequestMapping  共享映射,接收所有的HTTP请求,加类上:提取一个类中相同的路径
     //    @GetMapping      限制Get请求
     //    @PostMapping     限制Post请求
@@ -62,7 +62,7 @@ public class spring注解 {
     //    @ExceptionHandler 用于全局处理控制器里的异常，进行全局异常处理
     //    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") json格式化处理
 
-    //SSM.Spring Boot
+    //Spring Boot
     //    @SpringBootApplication   一个复合注解，包含了
     //          @SpringBootConfiguration   继承@Configuration注解，主要用于加载配置文件
     //          @EnableAutoConfiguration   开启自动配置功能:将所有符合条件的@Configuration配置都加载到当前SpringBoot创建并使用的IoC容器。
@@ -73,7 +73,7 @@ public class spring注解 {
     //    @auto
     //    @ConfigurationProperties(prefix="")      配置为属性类,获取配饰文件中 数据
 
-    //MysqlS.MyBatis-plus:
+    //MyBatis-plus:
     //    @Mapper        标记为数据层dao
     //    @TableName()   设置对应数据库表名
     //    @TableId(value,type) 将属性对应字段指定为id(可起别名)和 设置id添加策略

@@ -15,7 +15,7 @@ public class main {
 
     //Filter拦截路径配置
     //●javaweb.Filter 可以根据需求，配置不同的拦截资源路径
-    //QWebFilter ("/*")
+    //@WebFilter ("/*")
     //public cLass FilterDemo
     //➢拦截具体的资源: /index.jsp: 只有访问index.jsp时才会被拦截。
     //➢目录拦截: /user/*:访问/user^下的所有资源，都会被拦截
